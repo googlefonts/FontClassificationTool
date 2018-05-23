@@ -2,6 +2,9 @@
 # coding: utf-8
 # Copyright 2013 The Font Bakery Authors. All Rights Reserved.
 # Copyright 2017 The Google Font Tools Authors
+# Copyright 2018 The Font Classification Tool Authors:
+#                - Felipe C. da S. Sanches
+#                - Dave Crossland
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -63,8 +66,9 @@ parser.add_argument("-m", "--missingmetadata", default=False, action='store_true
 parser.add_argument("-o", "--output", default="output.csv", required=True,
                     help="CSV data output filename")
 
-#TODO: make this a CLI argument as well:
+#TODO: make these available as CLI arguments as well:
 VERBOSE=True
+PICKY=False #will only accept fonts with no hinting tables or all three tables.
 
 try:
   from PIL import (Image,
@@ -328,16 +332,18 @@ def get_gfn(fontfile):
   return gfn
 
 
-
+blacklisted = []
 def analyse_fonts(files):
   """Returns fontinfo dict"""
+  global blacklisted
 
   fontinfo = {}
   # run the analysis for each file, in sorted order
   for count, fontfile in enumerate(sorted(files)):
     # if blacklisted the skip it
     if is_blacklisted(fontfile):
-      #print >> sys.stderr, "%s is blacklisted." % fontfile
+      blacklisted.append(fontfile)
+      print >> sys.stderr, "[{}/{}] {} BLACKLISTED!".format(count+1, len(files), fontfile)
       continue
     else:
       print("[{}/{}] {}...".format(count+1, len(files), fontfile))
@@ -367,26 +373,29 @@ def is_blacklisted(filename):
     if name in filename:
       return True
 
-  # otherwise, blacklist fonts with a bad set of hinting tables:
-  ttfont = TTFont(filename)
-  hinting_tables = ["fpgm", "prep", "cvt"]
-
-  found = []
-  for table in hinting_tables:
-    if table in ttfont:
-      found.append(table)
-
-  no_hinting_table_found = (found == [])
-  all_hinting_tables_found = (found == hinting_tables)
-
-  # we're looking for all or nothing here:
-  good_font = all_hinting_tables_found or no_hinting_table_found
-  if not good_font:
-    #print >> sys.stderr, "Found the following instruction tables: %s" % found
-    #print >> sys.stderr, "Expected %s or no table at all." % hinting_tables
-    return True
+  if not PICKY:
+    return False
   else:
-    return False  # not blacklisted
+    # otherwise, blacklist fonts with a bad set of hinting tables:
+    ttfont = TTFont(filename)
+    hinting_tables = ["fpgm", "prep", "cvt"]
+
+    found = []
+    for table in hinting_tables:
+      if table in ttfont:
+        found.append(table)
+
+    no_hinting_table_found = (found == [])
+    all_hinting_tables_found = (found == hinting_tables)
+
+    # we're looking for all or nothing here:
+    good_font = all_hinting_tables_found or no_hinting_table_found
+    if not good_font:
+      #print >> sys.stderr, "Found the following instruction tables: %s" % found
+      #print >> sys.stderr, "Expected %s or no table at all." % hinting_tables
+      return True
+    else:
+      return False  # not blacklisted
 
 
 def get_angle(fontfile):
@@ -658,7 +667,11 @@ def main():
         row['values'][colname] = newvalue
     return save_csv()
 
-  print "Access http://127.0.0.1:5000/font_classification_tool/index.html\n"
+  if blacklisted:
+    print ("{} blacklisted font files:\n".format(len(blacklisted)))
+    print ("".join(map("* {}\n".format, blacklisted)))
+
+  print ("\n\nAccess http://127.0.0.1:5000/font_classification_tool/index.html\n")
   app.run()
 
 
