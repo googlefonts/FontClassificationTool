@@ -68,7 +68,6 @@ parser.add_argument("-o", "--output", default="output.csv", required=True,
 
 #TODO: make these available as CLI arguments as well:
 VERBOSE=True
-PICKY=False #will only accept fonts with no hinting tables or all three tables.
 
 try:
   from PIL import (Image,
@@ -286,7 +285,7 @@ def _FileFamilyStyleWeights(fontdir):
   return result
 
 
-def get_gfn(fontfile):
+def get_gfn(fontfile, ttfont):
   gfn = "unknown"
   fontdir = os.path.dirname(fontfile)
   metadata = os.path.join(fontdir, "METADATA.pb")
@@ -311,7 +310,6 @@ def get_gfn(fontfile):
     # to auto-detect the GFN value. As a last resort
     # we'll try to extract the info from the NAME table entries.
     try:
-      ttfont = TTFont(fontfile)
       for entry in ttfont['name'].names:
         if entry.nameID == NAMEID_FONT_FAMILY_NAME:
           family = entry.string.decode(entry.getEncoding()).encode('ascii', 'ignore').strip()
@@ -323,7 +321,7 @@ def get_gfn(fontfile):
         if VERBOSE:
           print ("Detected GFN from name table entries: '{}' (file='{}')".format(gfn, fontfile))
     except:
-      #This seems to be a really bad font file...
+      print("This seems to be a really bad font file...")
       pass
 
   if gfn == 'unknown':
@@ -348,10 +346,12 @@ def analyse_fonts(files):
     else:
       print("[{}/{}] {}...".format(count+1, len(files), fontfile))
     # put metadata in dictionary
+    ttfont = TTFont(fontfile)
     darkness, img_d = get_darkness(fontfile)
     width, img_w = get_width(fontfile)
-    angle = get_angle(fontfile)
-    gfn = get_gfn(fontfile)
+    angle = get_angle(ttfont)
+    gfn = get_gfn(fontfile, ttfont)
+    ttfont.close()
     fontinfo[gfn] = {"weight": darkness,
                      "width": width,
                      "angle": angle,
@@ -373,38 +373,10 @@ def is_blacklisted(filename):
     if name in filename:
       return True
 
-  if not PICKY:
-    return False
-  else:
-    # otherwise, blacklist fonts with a bad set of hinting tables:
-    ttfont = TTFont(filename)
-    hinting_tables = ["fpgm", "prep", "cvt"]
 
-    found = []
-    for table in hinting_tables:
-      if table in ttfont:
-        found.append(table)
-
-    no_hinting_table_found = (found == [])
-    all_hinting_tables_found = (found == hinting_tables)
-
-    # we're looking for all or nothing here:
-    good_font = all_hinting_tables_found or no_hinting_table_found
-    if not good_font:
-      #print >> sys.stderr, "Found the following instruction tables: %s" % found
-      #print >> sys.stderr, "Expected %s or no table at all." % hinting_tables
-      return True
-    else:
-      return False  # not blacklisted
-
-
-def get_angle(fontfile):
+def get_angle(ttfont):
   """Returns the italic angle, given a filename of a TTF"""
-
-  ttfont = TTFont(fontfile)
-  angle = ttfont['post'].italicAngle
-  ttfont.close()
-  return angle
+  return ttfont['post'].italicAngle
 
 
 def get_width(fontfile):
