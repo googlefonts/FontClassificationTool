@@ -145,8 +145,9 @@ def get_FamilyProto_Message(path):
     text_format.Merge(text_data, message)
     return message
 
-# Normalizes a set of values from 0 to target_max
+
 def normalize_values(properties, target_max=1.0):
+  """Normalizes a set of values from 0 to target_max"""
   max_value = 0.0
   for i in range(len(properties)):
     val = float(properties[i]['value'])
@@ -154,20 +155,29 @@ def normalize_values(properties, target_max=1.0):
   for i in range(len(properties)):
     properties[i]['value'] *= (target_max/max_value)
 
-# Maps a list into the integer range from target_min to target_max
-# Pass a list of floats, returns the list as ints
-# The 2 lists are zippable
-def map_to_int_range(weights, target_min=1, target_max=10):
-  weights_as_int = []
-  weights_ordered = sorted(weights)
-  min_value = float(weights_ordered[0])
-  max_value = float(weights_ordered[-1])
+
+def map_to_int_range(values, target_min=1, target_max=10):
+  """Maps a list into the integer range from target_min to target_max
+     Pass a list of floats, returns the list as ints
+     The 2 lists are zippable"""
+  integer_values = []
+  values_ordered = sorted(values)
+  min_value = float(values_ordered[0])
+  max_value = float(values_ordered[-1])
+
+  if min_value == max_value:
+    #convert to integer and clamp between min and max
+    integer_value = int(min_value)
+    integer_value = max(target_min, integer_value)
+    integer_value = min(integer_value, target_max)
+    return [integer_value for v in values]
+
   target_range = (target_max - target_min)
   float_range = (max_value - min_value)
-  for weight in weights:
-    weight = target_min + int(target_range * ((weight - min_value) / float_range))
-    weights_as_int.append(weight)
-  return weights_as_int
+  for value in values:
+    value = target_min + int(target_range * ((value - min_value) / float_range))
+    integer_values.append(value)
+  return integer_values
 
 ITALIC_ANGLE_TEMPLATE = """
 <img height='30%%' src='data:image/png;base64,%s'
@@ -347,8 +357,7 @@ def analyse_fonts(files):
       print("[{}/{}] {}...".format(count+1, len(files), fontfile))
     # put metadata in dictionary
     ttfont = TTFont(fontfile)
-    darkness, img_d = get_darkness(fontfile)
-    width, img_w = get_width(fontfile)
+    darkness, width, img_d = get_darkness_and_width(fontfile)
     angle = get_angle(ttfont)
     gfn = get_gfn(fontfile, ttfont)
     ttfont.close()
@@ -356,7 +365,6 @@ def analyse_fonts(files):
                      "width": width,
                      "angle": angle,
                      "img_weight": img_d,
-                     "img_width": img_w,
                      "usage": "unknown",
                      "gfn": gfn,
                      "fontfile": fontfile
@@ -379,27 +387,9 @@ def get_angle(ttfont):
   return ttfont['post'].italicAngle
 
 
-def get_width(fontfile):
-  """Returns the width, given a filename of a ttf.
-     This is in pixels so should be normalized."""
-
-  # Render the test text using the font onto an image.
-  font = ImageFont.truetype(fontfile, FONT_SIZE)
-  try:
-      text_width, text_height = font.getsize(TEXT)
-  except:
-      text_width, text_height = 1, 1
-  img = Image.new('RGBA', (text_width, text_height))
-  draw = ImageDraw.Draw(img)
-  try:
-      draw.text((0, 0), TEXT, font=font, fill=(0, 0, 0))
-  except:
-      pass
-  return text_width, get_base64_image(img)
-
-
-def get_darkness(fontfile):
-  """Returns the darkness, given a filename of a TTF"""
+def get_darkness_and_width(fontfile):
+  """Returns the darkness and width if a given a TTF.
+     Width is in pixels so it should be normalized."""
 
   # Render the test text using the font onto an image.
   font = ImageFont.truetype(fontfile, FONT_SIZE)
@@ -410,23 +400,13 @@ def get_darkness(fontfile):
 
   # Calculate the average darkness.
   histogram = img.histogram()
-  alpha = histogram[768:]
   avg = 0.0
-  darkness = 0.0
-  for i, value in enumerate(alpha):
-    avg += (i / 255.0) * value
-  try:
-    darkness = avg / (text_width * text_height)
-  except:
-    raise
+  for i in range(256):
+    alpha = histogram[i + 3*256]
+    avg += (i / 255.0) * alpha
 
-  # Weight the darkness by x-height for more accurate results
-  # FIXME Perhaps this should instead *CROP* the image
-  # to the bbox of the letters, to remove additional
-  # whitespace created by vertical metrics, even for more accuracy
-  x_height = get_x_height(fontfile)
-  darkness *= (x_height / float(FONT_SIZE))
-  return darkness, get_base64_image(img)
+  darkness = avg / (text_width * text_height)
+  return darkness, text_width, get_base64_image(img)
 
 
 def get_base64_image(img):
@@ -449,6 +429,9 @@ def get_x_height(fontfile):
 def render_slant_chars(fontfile):
   """Renders a sample of a few glyphs and
      returns a PNG image as base64 data"""
+  # Disable this to speedup the tool
+  # We are currently not using this image
+  return ""
 
   SAMPLE_CHARS = "HNHNUHNHN"
   font = ImageFont.truetype(fontfile, FONT_SIZE * 10)
@@ -484,7 +467,7 @@ def main():
       sys.exit("you must use the --existing attribute in conjunction with --missingmetadata")
     else:
       rejected = []
-      with open(args.existing, 'rb') as csvfile:
+      with open(args.existing) as csvfile:
         existing_data = csv.reader(csvfile, delimiter=',', quotechar='"')
         next(existing_data) # skip first row as its not data
         for row in existing_data:
@@ -510,6 +493,8 @@ def main():
   for key in sorted(fontinfo.keys()):
     weights.append(fontinfo[key]["weight"])
   ints = map_to_int_range(weights)
+  #print("weights: {}".format(weights))
+  #print("ints: {}".format(ints))
   for count, key in enumerate(sorted(fontinfo.keys())):
     fontinfo[key]['weight_int'] = ints[count]
 
@@ -523,31 +508,27 @@ def main():
 
   # normalise angles
   angles = []
-  for fontfile in sorted(fontinfo.keys()):
-    angle = abs(fontinfo[fontfile]["angle"])
+  for gfn in sorted(fontinfo.keys()):
+    angle = abs(fontinfo[gfn]["angle"])
     angles.append(angle)
+    #print("gfn: {} angles: {}".format(gfn, angle))
   ints = map_to_int_range(angles)
   for count, key in enumerate(sorted(fontinfo.keys())):
     fontinfo[key]['angle_int'] = ints[count]
 
   # include existing values
   if args.existing and args.missingmetadata == False:
-    with open(args.existing, 'rb') as csvfile:
+    with open(args.existing) as csvfile:
         existing_data = csv.reader(csvfile, delimiter=',', quotechar='"')
         next(existing_data) # skip first row as its not data
         for row in existing_data:
           gfn = row[0]
-          fontinfo[gfn] = {"weight": "None",
-                           "weight_int": row[1],
-                           "width": "None",
-                           "width_int": row[3],
-                           "angle": "None",
-                           "angle_int": row[2],
-                           "img_weight": None,
-                           "img_width": None,
-                           "usage": row[4],
-                           "gfn": gfn
-                          }
+          if gfn in fontinfo.keys():
+            fontinfo[gfn]["weight_int"] = int(row[1])
+            fontinfo[gfn]["angle_int"] = int(row[2])
+            fontinfo[gfn]["width_int"] = int(row[3])
+            fontinfo[gfn]["usage"] = row[4]
+            #print("got this one! keys='{}', gfn='{}'".format(fontinfo.keys(), gfn))
 
   # if we are debugging, just print the stuff
   if args.debug:
@@ -586,14 +567,11 @@ def main():
     values = fontinfo[key]
     if values["gfn"] == "unknown":
       continue
-    img_weight_html, img_width_html = "", ""
+    img_weight_html = ""
     if values["img_weight"] is not None:
       img_weight_html = "<img height='50%%' src='data:image/png;base64,%s' />" % (values["img_weight"])
-      #img_width_html  = "<img height='50%%' src='data:image/png;base64,%s' />" % (values["img_width"])
 
-    img_angle_html = ""
-    if ".ttf" in values["fontfile"]:
-      img_angle_html = ITALIC_ANGLE_TEMPLATE % (render_slant_chars(values["fontfile"]), values["angle_int"])
+    img_angle_html = ITALIC_ANGLE_TEMPLATE % (render_slant_chars(values["fontfile"]), values["angle_int"])
 
     values["image"] = img_weight_html
     values["angle_image"] = img_angle_html
@@ -602,15 +580,11 @@ def main():
 
   def save_csv():
     filename = args.output
-    #count = 0
-    #while os.isfile(filename):
-    #  print filename, "exists, trying", filename + count
-    #  filename = filename + count
-    with open(filename, 'wb') as csvfile:
-        writer = csv.writer(csvfile, delimiter=',', quotechar='"')
+    with open(filename, 'w') as csvfile:
+        writer = csv.writer(csvfile, delimiter=',', quotechar='"', lineterminator='\n')
         writer.writerow(["GFN","FWE","FIA","FWI","USAGE"]) # first row has the headers
-        for data in grid_data["data"]:
-          values = data["values"]
+        for data in sorted(grid_data['data'], key=lambda d: d['values']['gfn']):
+          values = data['values']
           gfn = values['gfn']
           fwe = values['weight_int']
           fia = values['angle_int']
