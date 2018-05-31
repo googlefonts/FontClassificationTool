@@ -103,6 +103,14 @@ FONT_SIZE = 30
 # problematic if a given font doesn't have latin support.
 TEXT = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyZz"
 
+# This text-block results in a better calculation of "darkness":
+TEXT_MULTILINE = ("AaBbCcDdEeAaBbCcDdEe\n"
+                  "FfGgHhIiJjFfGgHhIiJj\n"
+                  "KkLlMmNnOoKkLlMmNnOo\n"
+                  "PpQqRrSsTtPpQqRrSsTt\n"
+                  "UuVvXxYyZzUuVvXxYyZz")
+TEXT = TEXT_MULTILINE #hack
+
 # Fonts that cause problems: any filenames containing these letters
 # will be skipped.
 # TODO: Investigate why these don't work.
@@ -393,10 +401,32 @@ def get_darkness_and_width(fontfile):
 
   # Render the test text using the font onto an image.
   font = ImageFont.truetype(fontfile, FONT_SIZE)
-  text_width, text_height = font.getsize(TEXT)
-  img = Image.new('RGBA', (text_width, text_height))
+  text_width, text_height = font.getsize(TEXT_MULTILINE)
+  img = Image.new('RGBA', (text_width/2, 10*text_height))
   draw = ImageDraw.Draw(img)
-  draw.text((0, 0), TEXT, font=font, fill=(0, 0, 0))
+  draw.text((0, 0), TEXT_MULTILINE, font=font, fill=(0, 0, 0))
+
+  # Calculate the average darkness.
+  histogram = img.histogram()
+  avg = 0.0
+  for i in range(256):
+    alpha = histogram[i + 3*256]
+    avg += (i / 255.0) * alpha
+
+  darkness = avg / (text_width * text_height)
+  return darkness, text_width, get_base64_image(img)
+
+
+def get_darkness_and_width(fontfile):
+  """Returns the darkness and width if a given a TTF.
+     Width is in pixels so it should be normalized."""
+
+  # Render the test text using the font onto an image.
+  font = ImageFont.truetype(fontfile, FONT_SIZE)
+  text_width, text_height = font.getsize(TEXT_MULTILINE)
+  img = Image.new('RGBA', (text_width/10, 5*text_height))
+  draw = ImageDraw.Draw(img)
+  draw.text((0, 0), TEXT_MULTILINE, font=font, fill=(0, 0, 0))
 
   # Calculate the average darkness.
   histogram = img.histogram()
@@ -417,13 +447,6 @@ def get_base64_image(img):
   base64img = output.getvalue().encode("base64")
   output.close()
   return base64img
-
-
-def get_x_height(fontfile):
-  """Returns the height of the lowercase "x" in a font."""
-  font = ImageFont.truetype(fontfile, FONT_SIZE)
-  _, x_height = font.getsize("x")
-  return x_height
 
 
 def render_slant_chars(fontfile):
