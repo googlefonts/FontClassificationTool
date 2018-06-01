@@ -85,9 +85,14 @@ function updateCellValue(grid, rowIndex, columnIndex, oldValue, newValue, row){
 }
 
 window.onload = function() {
+    var cur_row = 0;
+    var angle_col;
+    var weight_col;
+    var usage_col;
+    const SELECTED_COLOR = "#ddd";
+    const NOT_SELECTED_COLOR = "white";
 
-// the following works
-grid = new EditableGrid("DemoGridJSON", {
+    grid = new EditableGrid("DemoGridJSON", {
 	    modelChanged: function(rowIndex, columnIndex, oldValue, newValue, row) {
 	        updateCellValue(this, rowIndex, columnIndex, oldValue, newValue, row);
 	    },
@@ -95,9 +100,19 @@ grid = new EditableGrid("DemoGridJSON", {
               this.renderGrid("tablecontent", "testgrid");
 
               var columnIndex;
-              for (columnIndex=0; columnIndex < 20; columnIndex ++){
+              for (columnIndex=0; columnIndex < 20; columnIndex++){
                 if (this.getColumnName(columnIndex) == "angle_int") break;
               }
+              for (angle_col=0; angle_col < 20; angle_col++){
+                if (this.getColumnName(angle_col) == "angle_int") break;
+              }
+              for (weight_col=0; weight_col < 20; weight_col++){
+                if (this.getColumnName(weight_col) == "weight_int") break;
+              }
+              for (usage_col=0; usage_col < 20; usage_col++){
+                if (this.getColumnName(usage_col) == "usage") break;
+              }
+
               for (var rowIndex=0; rowIndex < this.getRowCount(); rowIndex ++){
                 var row = this.getRow(rowIndex);
                 $(row).find("img:first").css("background-image", "url(images/angle_" + this.getValueAt(rowIndex, columnIndex) + ".png)");
@@ -107,55 +122,65 @@ grid = new EditableGrid("DemoGridJSON", {
               $('.editablegrid-weight').hide();
               $('.editablegrid-width').hide();
               $('.editablegrid-angle').hide();
+              var input = $(grid.getRow(cur_row));
+
+              input.css("background-color", SELECTED_COLOR);
+              $('body').bind("keypress", function (e) {
+                  var angle = parseInt(grid.getValueAt(cur_row, angle_col));
+                  var weight = parseInt(grid.getValueAt(cur_row, weight_col));
+
+                  e.preventDefault(); // prevent the default action (move caret)
+                  if (e.shiftKey) {
+                  }
+
+                  switch (e.keyCode) {
+                      case 38:
+                          // up
+                          input.css("background-color", NOT_SELECTED_COLOR);
+                          cur_row--;
+                          input = $(grid.getRow(cur_row));
+                          input.css("background-color", SELECTED_COLOR);
+                          break;
+                      case 40:
+                          // down
+                          input.css("background-color", NOT_SELECTED_COLOR);
+                          cur_row++;
+                          input = $(grid.getRow(cur_row));
+                          input.css("background-color", SELECTED_COLOR);
+                          break;
+                  }
+                  switch (e.which) {
+                      case 105: //letter 'i' for "italic"
+                          // increase italic angle
+                          if (angle < 10){
+                            angle++;
+                            var previousValue = grid.setValueAt(cur_row, angle_col, angle, true);
+                            grid.modelChanged(cur_row, angle_col, previousValue, angle, grid.getRow(cur_row));
+                          }
+                          break;
+                      case 114: //letter 'r' for "regular"
+                          // decrease italic angle
+                          if (angle > 1){
+                            angle--;
+                            //grid.setValueAt(cur_row, angle_col, angle, true);
+                            var previousValue = grid.setValueAt(cur_row, angle_col, angle, true);
+                            grid.modelChanged(cur_row, angle_col, previousValue, angle, grid.getRow(cur_row));
+                          }
+                          break;
+                      case 98: //letter 'b' for "body"
+                          grid.setValueAt(cur_row, usage_col, "body", true);
+                          break;
+                      case 104: //letter 'h' for "header"
+                          grid.setValueAt(cur_row, usage_col, "header", true);
+                          break;
+                      case 117: //letter 'u' for "unknown"
+                          grid.setValueAt(cur_row, usage_col, "unknown", true);
+                          break;
+                  }
+              });
             }
 	});
-grid.loadJSON("../data.json");
-
-
-
-// the following does not FIXME
-var input = $('input');
-input.bind('mousewheel', function (e) {
-    e.preventDefault(); // prevent the default action (scroll)
-    var n = $(this).val();
-    var x = 1;
-    if (e.shiftKey) {
-        x = 10;
-    }
-    if (e.originalEvent.wheelDelta / 120 > 0) {
-        $(this).val(Math.max(parseInt(n) - x, 1));
-    } else {
-        $(this).val(parseInt(n) + x);
-    }
-});
-input.keydown(function (e) {
-    e.preventDefault(); // prevent the default action (move caret)
-    var n = $(this).val();
-    var x = 1;
-    if (e.shiftKey) {
-        x = 10;
-    }
-    switch (e.which) {
-        // case 37:
-            // left
-        //    $(this).val(Math.max(parseInt(n) - x, 1));
-        //    break;
-        case 38:
-            // up
-            $(this).val(parseInt(n) + x);
-            break;
-        //case 39:
-            // right
-        //    $(this).val(parseInt(n) + x);
-        //    break;
-        case 40:
-            // down
-            $(this).val(Math.max(parseInt(n) - x, 1));
-            break;
-        default:
-            return; // exit this handler for other keys
-    }
-});
+    grid.loadJSON("../data.json");
 }
 $( document ).ready(function() {
 	console.log( "ready!" ); // this runs
