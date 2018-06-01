@@ -26,12 +26,14 @@ td.editablegrid-image { overflow: scroll;}
 <body>
 <h1>Font Classification Editor</h1>
 <ul>
-<li><input type="checkbox" checked onclick="toggle_column(this, 'fontfile');">filename</input></li>
+<li><input type="checkbox"         onclick="toggle_column(this, 'fontfile');">filename</input></li>
 <li><input type="checkbox" checked onclick="toggle_column(this, 'gfn');">GFN</input></li>
-<li><input type="checkbox" checked onclick="toggle_column(this, 'weight');">weight</input></li>
+<li><input type="checkbox"         onclick="toggle_column(this, 'weight');">weight</input></li>
 <li><input type="checkbox" checked onclick="toggle_column(this, 'weight_int');">WEIGHT_INT</input></li>
+<li><input type="checkbox"         onclick="toggle_column(this, 'width');">width</input></li>
+<li><input type="checkbox" checked onclick="toggle_column(this, 'WIDTH_INT');">WIDTH_INT</input></li>
 <li><input type="checkbox" checked onclick="toggle_column(this, 'usage');">USAGE</input></li>
-<li><input type="checkbox" checked onclick="toggle_column(this, 'angle');">angle</input></li>
+<li><input type="checkbox"         onclick="toggle_column(this, 'angle');">angle</input></li>
 <li><input type="checkbox" checked onclick="toggle_column(this, 'angle_int');">ANGLE_INT</input></li>
 <li><input type="checkbox" checked onclick="toggle_column(this, 'image');">image</input></li>
 </ul>
@@ -100,9 +102,16 @@ grid = new EditableGrid("DemoGridJSON", {
                 var row = this.getRow(rowIndex);
                 $(row).find("img:first").css("background-image", "url(images/angle_" + this.getValueAt(rowIndex, columnIndex) + ".png)");
               }
+
+              $('.editablegrid-fontfile').hide();
+              $('.editablegrid-weight').hide();
+              $('.editablegrid-width').hide();
+              $('.editablegrid-angle').hide();
             }
 	});
 grid.loadJSON("../data.json");
+
+
 
 // the following does not FIXME
 var input = $('input');
