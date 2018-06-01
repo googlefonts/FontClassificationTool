@@ -524,9 +524,9 @@ def main():
         for row in existing_data:
           gfn = row[0]
           if gfn in fontinfo.keys():
-            fontinfo[gfn]["weight_int"] = int(row[1])
+            #fontinfo[gfn]["weight_int"] = int(row[1])
             fontinfo[gfn]["angle_int"] = int(row[2])
-            fontinfo[gfn]["width_int"] = int(row[3])
+            #fontinfo[gfn]["width_int"] = int(row[3])
             fontinfo[gfn]["usage"] = row[4]
             #print("got this one! keys='{}', gfn='{}'".format(fontinfo.keys(), gfn))
 
