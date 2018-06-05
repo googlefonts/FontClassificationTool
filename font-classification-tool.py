@@ -109,7 +109,6 @@ TEXT_MULTILINE = ("AaBbCcDdEeAaBbCcDdEe\n"
                   "KkLlMmNnOoKkLlMmNnOo\n"
                   "PpQqRrSsTtPpQqRrSsTt\n"
                   "UuVvXxYyZzUuVvXxYyZz")
-TEXT = TEXT_MULTILINE #hack
 
 # Fonts that cause problems: any filenames containing these letters
 # will be skipped.
@@ -349,11 +348,13 @@ def get_gfn(fontfile, ttfont):
 
 
 blacklisted = []
+bad_darkness = []
 def analyse_fonts(files):
   """Returns fontinfo dict"""
-  global blacklisted
+  global blacklisted, bad_darkness
 
   fontinfo = {}
+
   # run the analysis for each file, in sorted order
   for count, fontfile in enumerate(sorted(files)):
     # if blacklisted the skip it
@@ -366,9 +367,19 @@ def analyse_fonts(files):
     # put metadata in dictionary
     ttfont = TTFont(fontfile)
     darkness, width, img_d = get_darkness_and_width(fontfile)
+    img_d = render_single_line(fontfile)
     angle = get_angle(ttfont)
     gfn = get_gfn(fontfile, ttfont)
     ttfont.close()
+
+    if darkness == 0:
+      bad_darkness.append(gfn)
+      if gfn in fontinfo:
+        darkness = fontinfo[gfn]['weight']
+      else:
+        continue
+
+
     fontinfo[gfn] = {"weight": darkness,
                      "width": width,
                      "angle": angle,
@@ -402,31 +413,17 @@ def get_darkness_and_width(fontfile):
   # Render the test text using the font onto an image.
   font = ImageFont.truetype(fontfile, FONT_SIZE)
   text_width, text_height = font.getsize(TEXT_MULTILINE)
-  img = Image.new('RGBA', (text_width/2, 10*text_height))
-  draw = ImageDraw.Draw(img)
-  draw.text((0, 0), TEXT_MULTILINE, font=font, fill=(0, 0, 0))
 
-  # Calculate the average darkness.
-  histogram = img.histogram()
-  avg = 0.0
-  for i in range(256):
-    alpha = histogram[i + 3*256]
-    avg += (i / 255.0) * alpha
-
-  darkness = avg / (text_width * text_height)
-  return darkness, text_width, get_base64_image(img)
-
-
-def get_darkness_and_width(fontfile):
-  """Returns the darkness and width if a given a TTF.
-     Width is in pixels so it should be normalized."""
-
-  # Render the test text using the font onto an image.
-  font = ImageFont.truetype(fontfile, FONT_SIZE)
-  text_width, text_height = font.getsize(TEXT_MULTILINE)
+  # This is a trick to get a full block of text avoiding the
+  # beggining and end and sides of the actual rendered string
+  # bounding-box, because PIL seems to be bugged and sometimes
+  # adds some spurious white-space which would introduce
+  # errors in our calculation of the font darkness value:
   img = Image.new('RGBA', (text_width/10, 5*text_height))
   draw = ImageDraw.Draw(img)
-  draw.text((0, 0), TEXT_MULTILINE, font=font, fill=(0, 0, 0))
+  draw.text((-text_width/20, -2.5*text_height),
+            TEXT_MULTILINE + '\n' + TEXT_MULTILINE,
+            font=font, fill=(0, 0, 0))
 
   # Calculate the average darkness.
   histogram = img.histogram()
@@ -437,6 +434,16 @@ def get_darkness_and_width(fontfile):
 
   darkness = avg / (text_width * text_height)
   return darkness, text_width, get_base64_image(img)
+
+
+def render_single_line(fontfile):
+  # Render the test text using the font onto an image.
+  font = ImageFont.truetype(fontfile, FONT_SIZE)
+  text_width, text_height = font.getsize(TEXT)
+  img = Image.new('RGBA', (text_width, text_height))
+  draw = ImageDraw.Draw(img)
+  draw.text((0, 0), TEXT, font=font, fill=(0, 0, 0))
+  return get_base64_image(img)
 
 
 def get_base64_image(img):
@@ -549,9 +556,12 @@ def main():
           if gfn in fontinfo.keys():
             #fontinfo[gfn]["weight_int"] = int(row[1])
             fontinfo[gfn]["angle_int"] = int(row[2])
-            #fontinfo[gfn]["width_int"] = int(row[3])
+            fontinfo[gfn]["width_int"] = int(row[3])
             fontinfo[gfn]["usage"] = row[4]
+            fontinfo[gfn]["existing"] = True # that's a hack!
             #print("got this one! keys='{}', gfn='{}'".format(fontinfo.keys(), gfn))
+
+  fontinfo = {gfn: fontinfo[gfn] for gfn in fontinfo if "existing" in fontinfo[gfn]} #that's a hack!
 
   # if we are debugging, just print the stuff
   if args.debug:
@@ -639,6 +649,10 @@ def main():
   if blacklisted:
     print ("{} blacklisted font files:\n".format(len(blacklisted)))
     print ("".join(map("* {}\n".format, blacklisted)))
+
+  if bad_darkness:
+    print ("Failed to detect weight(darkness value) for {} of the font files:\n".format(len(bad_darkness)))
+    print ("".join(map("* {}\n".format, bad_darkness)))
 
   print ("\n\nAccess http://127.0.0.1:5000/font_classification_tool/index.html\n")
   app.run()
