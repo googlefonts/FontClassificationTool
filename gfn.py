@@ -206,3 +206,34 @@ def GFN_from_filename(fontfile):
 def GFNs_from_filenames(filenames):
   return {fname: GFN_from_filename(fname) for fname in filenames}
 
+
+def get_GFNs_from_gfonts(apikey):
+  import requests
+  APIURL = 'https://www.googleapis.com/webfonts/v1/webfonts?key={}'.format
+  r = requests.get(APIURL(apikey))
+
+  GFNs = []
+  for entry in r.json()["items"]:
+    family = entry["family"]
+    for variant in entry["variants"]:
+
+      if variant == "italic":
+        style = "italic"
+        weight == 400
+
+      elif "italic" in variant:
+        style = "italic"
+        weight = "".join(variant.split("italic"))
+
+      elif variant == 'regular':
+        style = "normal"
+        weight = 400
+
+      else:
+        style = "normal"
+        weight = variant
+
+      gfn = "{}:{}:{}".format(family, style, weight)
+      GFNs.append(gfn)
+      print (gfn)
+  return GFNs
