@@ -347,13 +347,12 @@ def get_gfn(fontfile, ttfont):
   return gfn
 
 
+fontinfo = {}
 blacklisted = []
 bad_darkness = []
 def analyse_fonts(files):
   """Returns fontinfo dict"""
-  global blacklisted, bad_darkness
-
-  fontinfo = {}
+  global blacklisted, bad_darkness, fontinfo
 
   # run the analysis for each file, in sorted order
   for count, fontfile in enumerate(sorted(files)):
@@ -366,10 +365,14 @@ def analyse_fonts(files):
       print("[{}/{}] {}...".format(count+1, len(files), fontfile))
     # put metadata in dictionary
     ttfont = TTFont(fontfile)
+    gfn = get_gfn(fontfile, ttfont)
+    if gfn not in fontinfo:
+      ttfont.close()
+      continue
+
     darkness, width, img_d = get_darkness_and_width(fontfile)
     img_d = render_single_line(fontfile)
-    angle = get_angle(ttfont)
-    gfn = get_gfn(fontfile, ttfont)
+#    angle = get_angle(ttfont)
     ttfont.close()
 
     if darkness == 0:
@@ -379,17 +382,11 @@ def analyse_fonts(files):
       else:
         continue
 
-
-    fontinfo[gfn] = {"weight": darkness,
-                     "width": width,
-                     "angle": angle,
-                     "img_weight": img_d,
-                     "usage": "unknown",
-                     "gfn": gfn,
-                     "fontfile": fontfile
-                    }
-  return fontinfo
-
+    fontinfo[gfn]["weight"] = darkness
+    fontinfo[gfn]["img_weight"] = img_d
+    fontinfo[gfn]["fontfile"] = fontfile
+#   fontinfo[gfn]["width"] = width
+#   fontinfo[gfn]["angle"] = angle
 
 
 def is_blacklisted(filename):
@@ -511,8 +508,24 @@ def main():
 
       print("These files were removed from the list:\n" + '\n'.join(rejected))
 
+
+  # start with the existing values:
+  if args.existing and args.missingmetadata == False:
+    with open(args.existing) as csvfile:
+        existing_data = csv.reader(csvfile, delimiter=',', quotechar='"')
+        next(existing_data) # skip first row as its not data
+        for row in existing_data:
+          gfn = row[0]
+          fontinfo[gfn] = {
+            "weight_int": int(row[1]),
+            "angle_int": int(row[2]),
+            "width_int": int(row[3]),
+            "usage": row[4],
+            "gfn": gfn
+          }
+ 
   # analyse fonts
-  fontinfo = analyse_fonts(files_to_process)
+  analyse_fonts(files_to_process)
 
   if fontinfo == {}:
     sys.exit("All specified fonts are blacklisted!")
@@ -521,47 +534,17 @@ def main():
   # normalise weights
   weights = []
   for key in sorted(fontinfo.keys()):
-    weights.append(fontinfo[key]["weight"])
+    if "weight" not in fontinfo[key]:
+      del fontinfo[key]
+    else:
+      weights.append(fontinfo[key]["weight"])
+
   ints = map_to_int_range(weights)
   #print("weights: {}".format(weights))
   #print("ints: {}".format(ints))
   for count, key in enumerate(sorted(fontinfo.keys())):
     fontinfo[key]['weight_int'] = ints[count]
 
-  # normalise widths
-  widths = []
-  for key in sorted(fontinfo.keys()):
-    widths.append(fontinfo[key]["width"])
-  ints = map_to_int_range(widths)
-  for count, key in enumerate(sorted(fontinfo.keys())):
-    fontinfo[key]['width_int'] = ints[count]
-
-  # normalise angles
-  angles = []
-  for gfn in sorted(fontinfo.keys()):
-    angle = abs(fontinfo[gfn]["angle"])
-    angles.append(angle)
-    #print("gfn: {} angles: {}".format(gfn, angle))
-  ints = map_to_int_range(angles)
-  for count, key in enumerate(sorted(fontinfo.keys())):
-    fontinfo[key]['angle_int'] = ints[count]
-
-  # include existing values
-  if args.existing and args.missingmetadata == False:
-    with open(args.existing) as csvfile:
-        existing_data = csv.reader(csvfile, delimiter=',', quotechar='"')
-        next(existing_data) # skip first row as its not data
-        for row in existing_data:
-          gfn = row[0]
-          if gfn in fontinfo.keys():
-            #fontinfo[gfn]["weight_int"] = int(row[1])
-            fontinfo[gfn]["angle_int"] = int(row[2])
-            fontinfo[gfn]["width_int"] = int(row[3])
-            fontinfo[gfn]["usage"] = row[4]
-            fontinfo[gfn]["existing"] = True # that's a hack!
-            #print("got this one! keys='{}', gfn='{}'".format(fontinfo.keys(), gfn))
-
-  fontinfo = {gfn: fontinfo[gfn] for gfn in fontinfo if "existing" in fontinfo[gfn]} #that's a hack!
 
   # if we are debugging, just print the stuff
   if args.debug:
@@ -598,8 +581,8 @@ def main():
   field_id = 1
   for key in fontinfo:
     values = fontinfo[key]
-    if values["gfn"] == "unknown":
-      continue
+#    if values["gfn"] == "unknown":
+#      continue
     img_weight_html = ""
     if values["img_weight"] is not None:
       img_weight_html = "<img height='50%%' src='data:image/png;base64,%s' />" % (values["img_weight"])
