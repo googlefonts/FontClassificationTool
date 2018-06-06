@@ -56,9 +56,6 @@ def main():
       metadata[gfn] = old_metadata[gfn] # preserve every old value
       metadata[gfn]['weight_int'] = weights[fname] # except the new weight values we have just computed
 
-#  for gfn in sorted(metadata.keys()):
-#    print("{}: {}".format(gfn, metadata[gfn]['weight_int']))
-
   if args.output:
     save_csv(args.output, metadata)
 

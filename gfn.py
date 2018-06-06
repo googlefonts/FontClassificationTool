@@ -22,6 +22,7 @@
 # Further improved by Dave Crossland and Felipe Sanches.
 #
 import os
+import sys
 import collections
 from fonts_public_pb2 import FamilyProto
 from constants import (NAMEID_FONT_FAMILY_NAME,
@@ -30,12 +31,12 @@ from constants import (NAMEID_FONT_FAMILY_NAME,
 try:
   from fontTools.ttLib import TTFont
 except:
-  sys.exit("Needs fontTools.\n\npip install fonttools")
+  sys.exit("Needs fontTools.\n\npip3 install fonttools")
 
 try:
   from google.protobuf import text_format
 except:
-  sys.exit("Needs protobuf.\n\npip install protobuf")
+  sys.exit("Needs protobuf.\n\npip3 install protobuf")
 
 
 def get_FamilyProto_Message(path):

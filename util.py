@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 import csv
 from math import floor
+import sys
 
 try: 
   from PIL import (Image, 
                    ImageDraw, 
                    ImageFont) 
 except: 
-  sys.exit("Needs pillow.\n\npip install pillow") 
+  sys.exit("Needs pillow.\n\npip3 install pillow") 
  
 
 # The text used to test weight and width. Note that this could be
