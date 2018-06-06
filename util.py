@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import csv
+from math import floor
 
 try: 
   from PIL import (Image, 
@@ -30,6 +31,7 @@ def compute_darkness_and_width(fontfile):
 
      Both values should be normalized.
   """
+  print ("Computing... {}".format(fontfile))
 
   # Render the test text using the font onto an image.
   font = ImageFont.truetype(fontfile, FONT_SIZE)
@@ -86,7 +88,7 @@ def group_by_weight(filenames):
 
   weights = {}
   for name in filenames:
-    weights[name] = int(1 + 9 * ((darkness[name] - min_dark)/ dark_range))
+    weights[name] = int(1 + floor(10 * ((darkness[name] - min_dark)/ dark_range)))
 
   return weights
 
@@ -102,3 +104,45 @@ def save_csv(filename, metadata):
       fwi = data['width_int']
       usage = data['usage']
       writer.writerow([gfn, fwe, fia, fwi, usage])
+
+
+def read_csv(filename):
+  metadata = {}
+  with open(filename) as csvfile:
+    existing_data = csv.reader(csvfile, delimiter=',', quotechar='"')
+    next(existing_data) # skip first row as its not data
+    for row in existing_data:
+      gfn = row[0]
+      metadata[gfn] = {
+        "weight_int": int(row[1]),
+        "angle_int": int(row[2]),
+        "width_int": int(row[3]),
+        "usage": row[4]
+      }
+  return metadata
+
+
+# Fonts that cause problems: any filenames containing these letters
+# will be skipped.
+# TODO: Investigate why these don't work.
+BLACKLIST = [
+#IOError: execution context too long (issue #703)
+  "Padauk",
+  "KumarOne",
+#ZeroDivisionError: float division by zero
+  "AdobeBlank",
+  "Phetsarath",
+# IOError: invalid reference See also: https://github.com/google/fonts/issues/132#issuecomment-244796023
+  "Corben",
+# IOError: stack overflow on text_width, text_height = font.getsize(TEXT) 
+  "Rubik",
+]
+
+def is_blacklisted(filename):
+  """Returns whether a font is on the blacklist."""
+
+  # first check for explicit blacklisting:
+  for name in BLACKLIST:
+    if name in filename:
+      return True
+
