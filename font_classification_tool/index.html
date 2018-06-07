@@ -148,6 +148,23 @@ window.onload = function() {
                           input = $(grid.getRow(cur_row));
                           input.css("background-color", SELECTED_COLOR);
                           break;
+                      case 39: //right arrow for "more italic"
+                          // increase italic angle
+                          if (angle < 10){
+                            angle++;
+                            var previousValue = grid.setValueAt(cur_row, angle_col, angle, true);
+                            grid.modelChanged(cur_row, angle_col, previousValue, angle, grid.getRow(cur_row));
+                          }
+                          break;
+                      case 37: //left arrow for "less italic" (towards regular)
+                          // decrease italic angle
+                          if (angle > 1){
+                            angle--;
+                            //grid.setValueAt(cur_row, angle_col, angle, true);
+                            var previousValue = grid.setValueAt(cur_row, angle_col, angle, true);
+                            grid.modelChanged(cur_row, angle_col, previousValue, angle, grid.getRow(cur_row));
+                          }
+                          break;
                   }
                   switch (e.which) {
                       case 105: //letter 'i' for "italic"
