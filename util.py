@@ -56,8 +56,13 @@ def compute_darkness_and_width(fontfile):
     alpha = histogram[i + 3*256]
     avg += (i / 255.0) * alpha
 
+
   darkness = avg / (text_width * text_height)
-  return darkness, text_width#, get_base64_image(img)
+
+  x_height = font.getsize("x")[1]
+  width = text_width / float(x_height)
+
+  return darkness, width#, get_base64_image(img)
 
 
 
