@@ -2,6 +2,11 @@ GFN,FWE,FIA,FWI,USAGE
 ABeeZee:italic:400,3,4,7,header
 ABeeZee:normal:400,3,1,7,header
 Abel:normal:400,2,1,2,body
+Abhaya Libre:normal:400,-1,-1,-1,?
+Abhaya Libre:normal:500,-1,-1,-1,?
+Abhaya Libre:normal:600,-1,-1,-1,?
+Abhaya Libre:normal:700,-1,-1,-1,?
+Abhaya Libre:normal:800,-1,-1,-1,?
 Abril Fatface:normal:400,3,1,7,header
 Aclonica:normal:400,4,1,8,body
 Acme:normal:400,3,1,6,header
@@ -21,10 +26,14 @@ Aldrich:normal:400,4,1,8,header
 Alef:normal:400,2,1,7,header
 Alef:normal:700,3,1,8,header
 Alegreya SC:italic:400,2,4,7,header
+Alegreya SC:italic:500,-1,-1,-1,?
 Alegreya SC:italic:700,3,3,7,header
+Alegreya SC:italic:800,-1,-1,-1,?
 Alegreya SC:italic:900,4,3,7,header
 Alegreya SC:normal:400,2,1,7,header
+Alegreya SC:normal:500,-1,-1,-1,?
 Alegreya SC:normal:700,3,1,7,header
+Alegreya SC:normal:800,-1,-1,-1,?
 Alegreya SC:normal:900,4,1,7,header
 Alegreya Sans SC:italic:100,1,4,6,header
 Alegreya Sans SC:italic:300,2,3,6,header
@@ -55,10 +64,14 @@ Alegreya Sans:normal:700,4,1,6,header
 Alegreya Sans:normal:800,4,1,6,header
 Alegreya Sans:normal:900,5,1,6,header
 Alegreya:italic:400,2,4,6,header
+Alegreya:italic:500,-1,-1,-1,?
 Alegreya:italic:700,3,4,6,header
+Alegreya:italic:800,-1,-1,-1,?
 Alegreya:italic:900,4,4,6,header
 Alegreya:normal:400,2,1,6,header
+Alegreya:normal:500,-1,-1,-1,?
 Alegreya:normal:700,3,1,7,header
+Alegreya:normal:800,-1,-1,-1,?
 Alegreya:normal:900,4,1,7,header
 Alex Brush:normal:400,2,9,5,header
 Alfa Slab One:normal:400,5,1,8,header
@@ -94,12 +107,9 @@ Amiri:normal:700,3,1,4,body
 Amita:normal:400,2,2,4,header
 Amita:normal:700,2,2,4,header
 Anaheim:normal:400,2,1,7,body
-Andada SC:italic:400,2,4,7,header
-Andada SC:italic:700,3,4,7,header
-Andada SC:normal:400,2,1,7,header
-Andada SC:normal:700,3,1,7,header
 Andada:normal:400,3,1,7,body
 Andika:normal:400,2,1,7,body
+Angkor:normal:400,-1,-1,-1,?
 Annie Use Your Telescope:normal:400,2,1,6,header
 Anonymous Pro:italic:400,2,5,8,header
 Anonymous Pro:italic:700,3,5,8,header
@@ -109,9 +119,6 @@ Antic Didone:normal:400,2,1,7,header
 Antic Slab:normal:400,2,1,7,header
 Antic:normal:400,2,1,7,body
 Anton:normal:400,5,1,7,body
-Antonio:normal:300,3,1,5,header
-Antonio:normal:400,4,1,6,body
-Antonio:normal:700,4,1,6,body
 Arapey:italic:400,2,5,6,header
 Arapey:normal:400,2,1,6,body
 Arbutus Slab:normal:400,3,1,8,body
@@ -119,9 +126,21 @@ Arbutus:normal:400,4,1,9,header
 Architects Daughter:normal:400,2,1,7,header
 Archivo Black:normal:400,5,1,8,header
 Archivo Narrow:italic:400,3,3,6,header
+Archivo Narrow:italic:500,-1,-1,-1,?
+Archivo Narrow:italic:600,-1,-1,-1,?
 Archivo Narrow:italic:700,4,3,6,header
 Archivo Narrow:normal:400,3,1,6,header
+Archivo Narrow:normal:500,-1,-1,-1,?
+Archivo Narrow:normal:600,-1,-1,-1,?
 Archivo Narrow:normal:700,4,1,6,header
+Archivo:italic:400,-1,-1,-1,?
+Archivo:italic:500,-1,-1,-1,?
+Archivo:italic:600,-1,-1,-1,?
+Archivo:italic:700,-1,-1,-1,?
+Archivo:normal:400,-1,-1,-1,?
+Archivo:normal:500,-1,-1,-1,?
+Archivo:normal:600,-1,-1,-1,?
+Archivo:normal:700,-1,-1,-1,?
 Aref Ruqaa:normal:400,2,1,4,header
 Aref Ruqaa:normal:700,2,1,4,header
 Arima Madurai:normal:100,1,1,4,body
@@ -138,6 +157,10 @@ Arimo:normal:400,3,1,7,body
 Arimo:normal:700,4,1,7,header
 Arizonia:normal:400,2,9,6,header
 Armata:normal:400,2,1,8,body
+Arsenal:italic:400,-1,-1,-1,?
+Arsenal:italic:700,-1,-1,-1,?
+Arsenal:normal:400,-1,-1,-1,?
+Arsenal:normal:700,-1,-1,-1,?
 Artifika:normal:400,3,1,8,body
 Arvo:italic:400,3,5,8,header
 Arvo:italic:700,4,4,8,header
@@ -145,9 +168,21 @@ Arvo:normal:400,3,1,7,body
 Arvo:normal:700,4,1,8,header
 Arya:normal:400,2,1,3,body
 Arya:normal:700,3,1,3,body
+Asap Condensed:italic:400,-1,-1,-1,?
+Asap Condensed:italic:500,-1,-1,-1,?
+Asap Condensed:italic:600,-1,-1,-1,?
+Asap Condensed:italic:700,-1,-1,-1,?
+Asap Condensed:normal:400,-1,-1,-1,?
+Asap Condensed:normal:500,-1,-1,-1,?
+Asap Condensed:normal:600,-1,-1,-1,?
+Asap Condensed:normal:700,-1,-1,-1,?
 Asap:italic:400,3,3,7,header
+Asap:italic:500,-1,-1,-1,?
+Asap:italic:600,-1,-1,-1,?
 Asap:italic:700,4,3,7,header
 Asap:normal:400,3,1,7,header
+Asap:normal:500,-1,-1,-1,?
+Asap:normal:600,-1,-1,-1,?
 Asap:normal:700,4,1,7,header
 Asar:normal:400,2,1,4,body
 Asset:normal:400,4,1,10,header
@@ -161,6 +196,17 @@ Astloch:normal:400,1,1,5,header
 Astloch:normal:700,4,1,6,header
 Asul:normal:400,3,1,7,body
 Asul:normal:700,3,1,7,header
+Athiti:normal:200,-1,-1,-1,?
+Athiti:normal:300,-1,-1,-1,?
+Athiti:normal:400,-1,-1,-1,?
+Athiti:normal:500,-1,-1,-1,?
+Athiti:normal:600,-1,-1,-1,?
+Athiti:normal:700,-1,-1,-1,?
+Atma:normal:300,-1,-1,-1,?
+Atma:normal:400,-1,-1,-1,?
+Atma:normal:500,-1,-1,-1,?
+Atma:normal:600,-1,-1,-1,?
+Atma:normal:700,-1,-1,-1,?
 Atomic Age:normal:400,3,1,8,body
 Aubrey:normal:400,3,1,6,body
 Audiowide:normal:400,3,1,8,header
@@ -187,9 +233,77 @@ Averia Serif Libre:normal:300,2,1,7,header
 Averia Serif Libre:normal:400,3,1,7,header
 Averia Serif Libre:normal:700,3,1,7,header
 Bad Script:normal:400,2,5,6,header
+Bahiana:normal:400,-1,-1,-1,?
+Baloo Bhai:normal:400,-1,-1,-1,?
+Baloo Bhaijaan:normal:400,-1,-1,-1,?
+Baloo Bhaina:normal:400,-1,-1,-1,?
+Baloo Chettan:normal:400,-1,-1,-1,?
+Baloo Da:normal:400,-1,-1,-1,?
+Baloo Paaji:normal:400,-1,-1,-1,?
+Baloo Tamma:normal:400,-1,-1,-1,?
+Baloo Tammudu:normal:400,-1,-1,-1,?
+Baloo Thambi:normal:400,-1,-1,-1,?
+Baloo:normal:400,-1,-1,-1,?
 Balthazar:normal:400,3,1,6,header
 Bangers:normal:400,6,4,6,header
+Barlow Condensed:italic:100,-1,-1,-1,?
+Barlow Condensed:italic:200,-1,-1,-1,?
+Barlow Condensed:italic:300,-1,-1,-1,?
+Barlow Condensed:italic:400,-1,-1,-1,?
+Barlow Condensed:italic:500,-1,-1,-1,?
+Barlow Condensed:italic:600,-1,-1,-1,?
+Barlow Condensed:italic:700,-1,-1,-1,?
+Barlow Condensed:italic:800,-1,-1,-1,?
+Barlow Condensed:italic:900,-1,-1,-1,?
+Barlow Condensed:normal:100,-1,-1,-1,?
+Barlow Condensed:normal:200,-1,-1,-1,?
+Barlow Condensed:normal:300,-1,-1,-1,?
+Barlow Condensed:normal:400,-1,-1,-1,?
+Barlow Condensed:normal:500,-1,-1,-1,?
+Barlow Condensed:normal:600,-1,-1,-1,?
+Barlow Condensed:normal:700,-1,-1,-1,?
+Barlow Condensed:normal:800,-1,-1,-1,?
+Barlow Condensed:normal:900,-1,-1,-1,?
+Barlow Semi Condensed:italic:100,-1,-1,-1,?
+Barlow Semi Condensed:italic:200,-1,-1,-1,?
+Barlow Semi Condensed:italic:300,-1,-1,-1,?
+Barlow Semi Condensed:italic:400,-1,-1,-1,?
+Barlow Semi Condensed:italic:500,-1,-1,-1,?
+Barlow Semi Condensed:italic:600,-1,-1,-1,?
+Barlow Semi Condensed:italic:700,-1,-1,-1,?
+Barlow Semi Condensed:italic:800,-1,-1,-1,?
+Barlow Semi Condensed:italic:900,-1,-1,-1,?
+Barlow Semi Condensed:normal:100,-1,-1,-1,?
+Barlow Semi Condensed:normal:200,-1,-1,-1,?
+Barlow Semi Condensed:normal:300,-1,-1,-1,?
+Barlow Semi Condensed:normal:400,-1,-1,-1,?
+Barlow Semi Condensed:normal:500,-1,-1,-1,?
+Barlow Semi Condensed:normal:600,-1,-1,-1,?
+Barlow Semi Condensed:normal:700,-1,-1,-1,?
+Barlow Semi Condensed:normal:800,-1,-1,-1,?
+Barlow Semi Condensed:normal:900,-1,-1,-1,?
+Barlow:italic:100,-1,-1,-1,?
+Barlow:italic:200,-1,-1,-1,?
+Barlow:italic:300,-1,-1,-1,?
+Barlow:italic:400,-1,-1,-1,?
+Barlow:italic:500,-1,-1,-1,?
+Barlow:italic:600,-1,-1,-1,?
+Barlow:italic:700,-1,-1,-1,?
+Barlow:italic:800,-1,-1,-1,?
+Barlow:italic:900,-1,-1,-1,?
+Barlow:normal:100,-1,-1,-1,?
+Barlow:normal:200,-1,-1,-1,?
+Barlow:normal:300,-1,-1,-1,?
+Barlow:normal:400,-1,-1,-1,?
+Barlow:normal:500,-1,-1,-1,?
+Barlow:normal:600,-1,-1,-1,?
+Barlow:normal:700,-1,-1,-1,?
+Barlow:normal:800,-1,-1,-1,?
+Barlow:normal:900,-1,-1,-1,?
+Barrio:normal:400,-1,-1,-1,?
 Basic:normal:400,3,1,7,header
+Battambang:normal:400,-1,-1,-1,?
+Battambang:normal:700,-1,-1,-1,?
 Baumans:normal:400,3,1,7,body
 Bayon:normal:400,1,1,4,header
 Belgrano:normal:400,3,1,8,header
@@ -201,11 +315,20 @@ BenchNine:normal:700,3,1,4,header
 Bentham:normal:400,2,1,7,body
 Berkshire Swash:normal:400,3,1,7,body
 Bevan:normal:400,5,1,8,header
-Bhavuka:normal:400,2,1,6,header
 Bigelow Rules:normal:400,2,1,2,header
 Bigshot One:normal:400,4,1,7,header
 Bilbo Swash Caps:normal:400,2,6,2,header
 Bilbo:normal:400,2,6,2,header
+BioRhyme Expanded:normal:200,-1,-1,-1,?
+BioRhyme Expanded:normal:300,-1,-1,-1,?
+BioRhyme Expanded:normal:400,-1,-1,-1,?
+BioRhyme Expanded:normal:700,-1,-1,-1,?
+BioRhyme Expanded:normal:800,-1,-1,-1,?
+BioRhyme:normal:200,-1,-1,-1,?
+BioRhyme:normal:300,-1,-1,-1,?
+BioRhyme:normal:400,-1,-1,-1,?
+BioRhyme:normal:700,-1,-1,-1,?
+BioRhyme:normal:800,-1,-1,-1,?
 Biryani:normal:200,2,1,5,body
 Biryani:normal:300,2,1,5,body
 Biryani:normal:400,3,1,5,body
@@ -216,6 +339,8 @@ Biryani:normal:900,4,1,5,body
 Bitter:italic:400,3,4,7,header
 Bitter:normal:400,3,1,7,body
 Bitter:normal:700,3,1,8,header
+Black And White Picture:normal:400,-1,-1,-1,?
+Black Han Sans:normal:400,-1,-1,-1,?
 Black Ops One:normal:400,5,1,8,header
 Bokor:normal:400,1,1,4,body
 Bonbon:normal:400,2,2,8,header
@@ -224,8 +349,6 @@ Bowlby One SC:normal:400,5,1,8,header
 Bowlby One:normal:400,5,1,8,header
 Brawler:normal:400,3,1,7,body
 Bree Serif:normal:400,3,1,7,body
-Bruno Ace SC:normal:400,3,1,9,header
-Bruno Ace:normal:400,3,1,8,header
 Bubblegum Sans:normal:400,4,1,6,header
 Bubbler One:normal:400,2,1,6,header
 Buda:normal:300,2,1,6,header
@@ -236,7 +359,6 @@ Bungee Inline:normal:400,6,1,8,header
 Bungee Outline:normal:400,1,1,8,header
 Bungee Shade:normal:400,3,1,8,header
 Bungee:normal:400,6,1,8,header
-Butcherman Caps:normal:400,4,1,8,header
 Butcherman:normal:400,3,1,8,header
 Butterfly Kids:normal:400,2,4,5,header
 Cabin Condensed:normal:400,3,1,6,header
@@ -255,6 +377,12 @@ Cabin:normal:600,3,1,7,header
 Cabin:normal:700,3,1,7,header
 Caesar Dressing:normal:400,4,1,7,header
 Cagliostro:normal:400,2,1,7,body
+Cairo:normal:200,-1,-1,-1,?
+Cairo:normal:300,-1,-1,-1,?
+Cairo:normal:400,-1,-1,-1,?
+Cairo:normal:600,-1,-1,-1,?
+Cairo:normal:700,-1,-1,-1,?
+Cairo:normal:900,-1,-1,-1,?
 Calligraffitti:normal:400,2,6,6,header
 Cambay:italic:400,2,4,7,header
 Cambay:italic:700,3,5,7,header
@@ -304,32 +432,43 @@ Changa:normal:600,3,1,4,header
 Changa:normal:700,4,1,4,header
 Changa:normal:800,4,1,4,header
 Chango:normal:400,5,1,9,header
+Chathura:normal:100,-1,-1,-1,?
+Chathura:normal:300,-1,-1,-1,?
+Chathura:normal:400,-1,-1,-1,?
+Chathura:normal:700,-1,-1,-1,?
+Chathura:normal:800,-1,-1,-1,?
 Chau Philomene One:italic:400,4,3,6,header
 Chau Philomene One:normal:400,4,1,6,header
 Chela One:normal:400,5,1,6,header
 Chelsea Market:normal:400,3,1,8,body
+Chenla:normal:400,-1,-1,-1,?
 Cherry Cream Soda:normal:400,3,1,8,header
 Cherry Swash:normal:400,3,1,7,body
 Cherry Swash:normal:700,4,1,8,header
 Chewy:normal:400,5,1,6,body
 Chicle:normal:400,5,1,6,header
+Chivo:italic:300,-1,-1,-1,?
 Chivo:italic:400,3,3,7,header
+Chivo:italic:700,-1,-1,-1,?
 Chivo:italic:900,5,3,7,header
+Chivo:normal:300,-1,-1,-1,?
 Chivo:normal:400,3,1,7,header
+Chivo:normal:700,-1,-1,-1,?
 Chivo:normal:900,5,1,7,header
+Chonburi:normal:400,-1,-1,-1,?
 Cinzel Decorative:normal:400,2,1,8,header
 Cinzel Decorative:normal:700,3,1,8,header
 Cinzel Decorative:normal:900,3,1,9,header
 Cinzel:normal:400,2,1,8,header
 Cinzel:normal:700,3,1,8,header
 Cinzel:normal:900,3,1,8,header
-Clara:normal:400,3,6,7,header
 Clicker Script:normal:400,2,2,5,header
 Coda Caption:normal:800,4,1,8,header
 Coda:normal:400,3,1,7,body
 Coda:normal:800,6,1,8,header
 Codystar:normal:300,1,9,8,header
 Codystar:normal:400,1,1,8,header
+Coiny:normal:400,-1,-1,-1,?
 Combo:normal:400,2,1,6,header
 Comfortaa:normal:300,2,1,8,header
 Comfortaa:normal:400,2,1,8,body
@@ -337,10 +476,59 @@ Comfortaa:normal:700,3,1,8,body
 Coming Soon:normal:400,2,1,7,header
 Concert One:normal:400,4,1,7,header
 Condiment:normal:400,3,9,6,header
+Content:normal:400,-1,-1,-1,?
+Content:normal:700,-1,-1,-1,?
 Contrail One:normal:400,4,3,6,header
 Convergence:normal:400,3,1,8,body
 Cookie:normal:400,3,1,5,header
 Copse:normal:400,3,1,7,header
+Corben:normal:400,-1,-1,-1,?
+Corben:normal:700,-1,-1,-1,?
+Cormorant Garamond:italic:300,-1,-1,-1,?
+Cormorant Garamond:italic:400,-1,-1,-1,?
+Cormorant Garamond:italic:500,-1,-1,-1,?
+Cormorant Garamond:italic:600,-1,-1,-1,?
+Cormorant Garamond:italic:700,-1,-1,-1,?
+Cormorant Garamond:normal:300,-1,-1,-1,?
+Cormorant Garamond:normal:400,-1,-1,-1,?
+Cormorant Garamond:normal:500,-1,-1,-1,?
+Cormorant Garamond:normal:600,-1,-1,-1,?
+Cormorant Garamond:normal:700,-1,-1,-1,?
+Cormorant Infant:italic:300,-1,-1,-1,?
+Cormorant Infant:italic:400,-1,-1,-1,?
+Cormorant Infant:italic:500,-1,-1,-1,?
+Cormorant Infant:italic:600,-1,-1,-1,?
+Cormorant Infant:italic:700,-1,-1,-1,?
+Cormorant Infant:normal:300,-1,-1,-1,?
+Cormorant Infant:normal:400,-1,-1,-1,?
+Cormorant Infant:normal:500,-1,-1,-1,?
+Cormorant Infant:normal:600,-1,-1,-1,?
+Cormorant Infant:normal:700,-1,-1,-1,?
+Cormorant SC:normal:300,-1,-1,-1,?
+Cormorant SC:normal:400,-1,-1,-1,?
+Cormorant SC:normal:500,-1,-1,-1,?
+Cormorant SC:normal:600,-1,-1,-1,?
+Cormorant SC:normal:700,-1,-1,-1,?
+Cormorant Unicase:normal:300,-1,-1,-1,?
+Cormorant Unicase:normal:400,-1,-1,-1,?
+Cormorant Unicase:normal:500,-1,-1,-1,?
+Cormorant Unicase:normal:600,-1,-1,-1,?
+Cormorant Unicase:normal:700,-1,-1,-1,?
+Cormorant Upright:normal:300,-1,-1,-1,?
+Cormorant Upright:normal:400,-1,-1,-1,?
+Cormorant Upright:normal:500,-1,-1,-1,?
+Cormorant Upright:normal:600,-1,-1,-1,?
+Cormorant Upright:normal:700,-1,-1,-1,?
+Cormorant:italic:300,-1,-1,-1,?
+Cormorant:italic:400,-1,-1,-1,?
+Cormorant:italic:500,-1,-1,-1,?
+Cormorant:italic:600,-1,-1,-1,?
+Cormorant:italic:700,-1,-1,-1,?
+Cormorant:normal:300,-1,-1,-1,?
+Cormorant:normal:400,-1,-1,-1,?
+Cormorant:normal:500,-1,-1,-1,?
+Cormorant:normal:600,-1,-1,-1,?
+Cormorant:normal:700,-1,-1,-1,?
 Courgette:normal:400,3,6,7,header
 Cousine:italic:400,3,4,8,header
 Cousine:italic:700,4,4,8,header
@@ -350,7 +538,6 @@ Coustard:normal:400,3,1,8,header
 Coustard:normal:900,4,1,8,header
 Covered By Your Grace:normal:400,3,1,6,header
 Crafty Girls:normal:400,2,1,8,header
-Creepster Caps:normal:400,5,1,6,header
 Creepster:normal:400,5,1,6,header
 Crete Round:italic:400,3,4,7,header
 Crete Round:normal:400,3,1,7,body
@@ -366,11 +553,16 @@ Cuprum:italic:400,3,4,6,header
 Cuprum:italic:700,4,4,6,header
 Cuprum:normal:400,3,1,6,body
 Cuprum:normal:700,4,1,6,header
+Cute Font:normal:400,-1,-1,-1,?
 Cutive Mono:normal:400,2,1,8,header
 Cutive:normal:400,4,1,8,header
 Damion:normal:400,3,8,6,header
 Dancing Script:normal:400,2,7,6,header
 Dancing Script:normal:700,3,7,6,header
+Dangrek:normal:400,-1,-1,-1,?
+David Libre:normal:400,-1,-1,-1,?
+David Libre:normal:500,-1,-1,-1,?
+David Libre:normal:700,-1,-1,-1,?
 Dawning of a New Day:normal:400,1,5,6,header
 Days One:normal:400,4,1,8,header
 Dekko:normal:400,2,1,3,body
@@ -382,13 +574,11 @@ Della Respira:normal:400,2,1,7,body
 Denk One:normal:400,4,1,7,header
 Devonshire:normal:400,3,3,5,header
 Dhurjati:normal:400,2,1,6,body
-Dhyana:normal:400,2,1,7,header
-Dhyana:normal:700,3,1,8,header
 Didact Gothic:normal:400,2,1,7,header
-Dinah:normal:400,2,1,5,body
-Dinah:normal:700,2,1,6,body
 Diplomata SC:normal:400,3,1,10,header
 Diplomata:normal:400,4,1,10,header
+Do Hyeon:normal:400,-1,-1,-1,?
+Dokdo:normal:400,-1,-1,-1,?
 Domine:normal:400,3,1,7,body
 Domine:normal:700,4,1,8,header
 Donegal One:normal:400,3,1,8,body
@@ -404,9 +594,18 @@ Dosis:normal:800,4,1,7,header
 Dr Sugiyama:normal:400,3,1,5,header
 Duru Sans:normal:400,2,1,8,body
 Dynalight:normal:400,2,7,5,header
+EB Garamond:italic:400,-1,-1,-1,?
+EB Garamond:italic:500,-1,-1,-1,?
+EB Garamond:italic:600,-1,-1,-1,?
+EB Garamond:italic:700,-1,-1,-1,?
+EB Garamond:italic:800,-1,-1,-1,?
 EB Garamond:normal:400,2,1,6,body
+EB Garamond:normal:500,-1,-1,-1,?
+EB Garamond:normal:600,-1,-1,-1,?
+EB Garamond:normal:700,-1,-1,-1,?
+EB Garamond:normal:800,-1,-1,-1,?
 Eagle Lake:normal:400,2,1,8,header
-Eater Caps:normal:400,3,1,8,header
+East Sea Dokdo:normal:400,-1,-1,-1,?
 Eater:normal:400,3,1,8,header
 Economica:italic:400,3,4,5,header
 Economica:italic:700,3,4,5,header
@@ -417,13 +616,10 @@ Eczar:normal:500,3,1,3,header
 Eczar:normal:600,3,1,3,header
 Eczar:normal:700,3,1,3,header
 Eczar:normal:800,4,1,3,header
-Ek Mukta:normal:200,2,1,6,header
-Ek Mukta:normal:300,2,1,6,body
-Ek Mukta:normal:400,2,1,7,body
-Ek Mukta:normal:500,3,1,7,header
-Ek Mukta:normal:600,3,1,7,header
-Ek Mukta:normal:700,3,1,7,header
-Ek Mukta:normal:800,3,1,7,header
+El Messiri:normal:400,-1,-1,-1,?
+El Messiri:normal:500,-1,-1,-1,?
+El Messiri:normal:600,-1,-1,-1,?
+El Messiri:normal:700,-1,-1,-1,?
 Electrolize:normal:400,2,1,7,body
 Elsie Swash Caps:normal:400,2,1,7,body
 Elsie Swash Caps:normal:900,4,1,8,header
@@ -440,6 +636,33 @@ Encode Sans Condensed:normal:600,4,1,7,header
 Encode Sans Condensed:normal:700,4,1,7,header
 Encode Sans Condensed:normal:800,5,1,7,header
 Encode Sans Condensed:normal:900,5,1,7,header
+Encode Sans Expanded:normal:100,-1,-1,-1,?
+Encode Sans Expanded:normal:200,-1,-1,-1,?
+Encode Sans Expanded:normal:300,-1,-1,-1,?
+Encode Sans Expanded:normal:400,-1,-1,-1,?
+Encode Sans Expanded:normal:500,-1,-1,-1,?
+Encode Sans Expanded:normal:600,-1,-1,-1,?
+Encode Sans Expanded:normal:700,-1,-1,-1,?
+Encode Sans Expanded:normal:800,-1,-1,-1,?
+Encode Sans Expanded:normal:900,-1,-1,-1,?
+Encode Sans Semi Condensed:normal:100,-1,-1,-1,?
+Encode Sans Semi Condensed:normal:200,-1,-1,-1,?
+Encode Sans Semi Condensed:normal:300,-1,-1,-1,?
+Encode Sans Semi Condensed:normal:400,-1,-1,-1,?
+Encode Sans Semi Condensed:normal:500,-1,-1,-1,?
+Encode Sans Semi Condensed:normal:600,-1,-1,-1,?
+Encode Sans Semi Condensed:normal:700,-1,-1,-1,?
+Encode Sans Semi Condensed:normal:800,-1,-1,-1,?
+Encode Sans Semi Condensed:normal:900,-1,-1,-1,?
+Encode Sans Semi Expanded:normal:100,-1,-1,-1,?
+Encode Sans Semi Expanded:normal:200,-1,-1,-1,?
+Encode Sans Semi Expanded:normal:300,-1,-1,-1,?
+Encode Sans Semi Expanded:normal:400,-1,-1,-1,?
+Encode Sans Semi Expanded:normal:500,-1,-1,-1,?
+Encode Sans Semi Expanded:normal:600,-1,-1,-1,?
+Encode Sans Semi Expanded:normal:700,-1,-1,-1,?
+Encode Sans Semi Expanded:normal:800,-1,-1,-1,?
+Encode Sans Semi Expanded:normal:900,-1,-1,-1,?
 Encode Sans:normal:100,1,1,7,header
 Encode Sans:normal:200,2,1,7,header
 Encode Sans:normal:300,2,1,7,header
@@ -507,13 +730,78 @@ Farsan:normal:400,3,3,3,body
 Fascinate Inline:normal:400,5,1,8,header
 Fascinate:normal:400,5,1,8,header
 Faster One:normal:400,5,4,8,header
+Fasthand:normal:400,-1,-1,-1,?
 Fauna One:normal:400,2,1,8,body
+Faustina:italic:400,-1,-1,-1,?
+Faustina:italic:500,-1,-1,-1,?
+Faustina:italic:600,-1,-1,-1,?
+Faustina:italic:700,-1,-1,-1,?
+Faustina:normal:400,-1,-1,-1,?
+Faustina:normal:500,-1,-1,-1,?
+Faustina:normal:600,-1,-1,-1,?
+Faustina:normal:700,-1,-1,-1,?
 Federant:normal:400,3,1,7,header
 Federo:normal:400,3,1,6,header
 Felipa:normal:400,2,4,6,header
 Fenix:normal:400,2,1,6,body
 Finger Paint:normal:400,3,1,8,header
+Fira Mono:normal:400,-1,-1,-1,?
+Fira Mono:normal:500,-1,-1,-1,?
+Fira Mono:normal:700,-1,-1,-1,?
+Fira Sans Condensed:italic:100,-1,-1,-1,?
+Fira Sans Condensed:italic:200,-1,-1,-1,?
+Fira Sans Condensed:italic:300,-1,-1,-1,?
+Fira Sans Condensed:italic:400,-1,-1,-1,?
+Fira Sans Condensed:italic:500,-1,-1,-1,?
+Fira Sans Condensed:italic:600,-1,-1,-1,?
+Fira Sans Condensed:italic:700,-1,-1,-1,?
+Fira Sans Condensed:italic:800,-1,-1,-1,?
+Fira Sans Condensed:italic:900,-1,-1,-1,?
+Fira Sans Condensed:normal:100,-1,-1,-1,?
+Fira Sans Condensed:normal:200,-1,-1,-1,?
+Fira Sans Condensed:normal:300,-1,-1,-1,?
+Fira Sans Condensed:normal:400,-1,-1,-1,?
+Fira Sans Condensed:normal:500,-1,-1,-1,?
+Fira Sans Condensed:normal:600,-1,-1,-1,?
+Fira Sans Condensed:normal:700,-1,-1,-1,?
+Fira Sans Condensed:normal:800,-1,-1,-1,?
+Fira Sans Condensed:normal:900,-1,-1,-1,?
+Fira Sans Extra Condensed:italic:100,-1,-1,-1,?
+Fira Sans Extra Condensed:italic:200,-1,-1,-1,?
+Fira Sans Extra Condensed:italic:300,-1,-1,-1,?
+Fira Sans Extra Condensed:italic:400,-1,-1,-1,?
+Fira Sans Extra Condensed:italic:500,-1,-1,-1,?
+Fira Sans Extra Condensed:italic:600,-1,-1,-1,?
+Fira Sans Extra Condensed:italic:700,-1,-1,-1,?
+Fira Sans Extra Condensed:italic:800,-1,-1,-1,?
+Fira Sans Extra Condensed:italic:900,-1,-1,-1,?
+Fira Sans Extra Condensed:normal:100,-1,-1,-1,?
+Fira Sans Extra Condensed:normal:200,-1,-1,-1,?
+Fira Sans Extra Condensed:normal:300,-1,-1,-1,?
+Fira Sans Extra Condensed:normal:400,-1,-1,-1,?
+Fira Sans Extra Condensed:normal:500,-1,-1,-1,?
+Fira Sans Extra Condensed:normal:600,-1,-1,-1,?
+Fira Sans Extra Condensed:normal:700,-1,-1,-1,?
+Fira Sans Extra Condensed:normal:800,-1,-1,-1,?
+Fira Sans Extra Condensed:normal:900,-1,-1,-1,?
+Fira Sans:italic:100,-1,-1,-1,?
+Fira Sans:italic:200,-1,-1,-1,?
 Fira Sans:italic:300,2,3,7,header
+Fira Sans:italic:400,-1,-1,-1,?
+Fira Sans:italic:500,-1,-1,-1,?
+Fira Sans:italic:600,-1,-1,-1,?
+Fira Sans:italic:700,-1,-1,-1,?
+Fira Sans:italic:800,-1,-1,-1,?
+Fira Sans:italic:900,-1,-1,-1,?
+Fira Sans:normal:100,-1,-1,-1,?
+Fira Sans:normal:200,-1,-1,-1,?
+Fira Sans:normal:300,-1,-1,-1,?
+Fira Sans:normal:400,-1,-1,-1,?
+Fira Sans:normal:500,-1,-1,-1,?
+Fira Sans:normal:600,-1,-1,-1,?
+Fira Sans:normal:700,-1,-1,-1,?
+Fira Sans:normal:800,-1,-1,-1,?
+Fira Sans:normal:900,-1,-1,-1,?
 Fjalla One:normal:400,4,1,6,body
 Fjord One:normal:400,2,1,7,body
 Flamenco:normal:300,1,1,6,header
@@ -524,9 +812,15 @@ Fondamento:normal:400,2,1,7,header
 Fontdiner Swanky:normal:400,3,1,8,header
 Forum:normal:400,2,1,6,header
 Francois One:normal:400,4,1,7,body
+Frank Ruhl Libre:normal:300,-1,-1,-1,?
+Frank Ruhl Libre:normal:400,-1,-1,-1,?
+Frank Ruhl Libre:normal:500,-1,-1,-1,?
+Frank Ruhl Libre:normal:700,-1,-1,-1,?
+Frank Ruhl Libre:normal:900,-1,-1,-1,?
 Freckle Face:normal:400,4,3,7,header
 Fredericka the Great:normal:400,2,1,7,header
 Fredoka One:normal:400,4,1,7,header
+Freehand:normal:400,-1,-1,-1,?
 Fresca:normal:400,3,1,6,body
 Frijole:normal:400,4,1,9,header
 Fruktur:normal:400,5,1,7,header
@@ -537,10 +831,14 @@ GFS Neohellenic:italic:700,3,5,7,header
 GFS Neohellenic:normal:400,2,1,6,header
 GFS Neohellenic:normal:700,3,1,6,header
 Gabriela:normal:400,3,1,8,body
+Gaegu:normal:300,-1,-1,-1,?
+Gaegu:normal:400,-1,-1,-1,?
+Gaegu:normal:700,-1,-1,-1,?
 Gafata:normal:400,2,1,7,body
 Galada:normal:400,3,4,4,header
 Galdeano:normal:400,3,1,6,header
 Galindo:normal:400,4,1,8,header
+Gamja Flower:normal:400,-1,-1,-1,?
 Gentium Basic:italic:400,2,3,6,header
 Gentium Basic:italic:700,3,3,6,header
 Gentium Basic:normal:400,2,1,7,body
@@ -565,6 +863,15 @@ Goblin One:normal:400,4,1,9,header
 Gochi Hand:normal:400,3,1,7,header
 Gorditas:normal:400,4,1,8,header
 Gorditas:normal:700,4,1,8,header
+Gothic A1:normal:100,-1,-1,-1,?
+Gothic A1:normal:200,-1,-1,-1,?
+Gothic A1:normal:300,-1,-1,-1,?
+Gothic A1:normal:400,-1,-1,-1,?
+Gothic A1:normal:500,-1,-1,-1,?
+Gothic A1:normal:600,-1,-1,-1,?
+Gothic A1:normal:700,-1,-1,-1,?
+Gothic A1:normal:800,-1,-1,-1,?
+Gothic A1:normal:900,-1,-1,-1,?
 Goudy Bookletter 1911:normal:400,2,1,6,header
 Graduate:normal:400,3,1,8,header
 Grand Hotel:normal:400,3,1,5,header
@@ -575,6 +882,7 @@ Gruppo:normal:400,1,1,7,header
 Gudea:italic:400,2,4,6,header
 Gudea:normal:400,2,1,7,body
 Gudea:normal:700,4,1,7,header
+Gugi:normal:400,-1,-1,-1,?
 Gurajada:normal:400,2,1,4,header
 Habibi:normal:400,2,1,7,body
 Halant:normal:300,2,1,7,header
@@ -589,6 +897,7 @@ Handlee:normal:400,2,1,6,header
 Hanuman:normal:400,3,1,7,body
 Hanuman:normal:700,3,1,7,header
 Happy Monkey:normal:400,2,1,8,header
+Harmattan:normal:400,-1,-1,-1,?
 Headland One:normal:400,3,1,8,body
 Heebo:normal:100,1,1,4,body
 Heebo:normal:300,2,1,4,body
@@ -598,8 +907,28 @@ Heebo:normal:700,3,1,4,body
 Heebo:normal:800,4,1,4,body
 Heebo:normal:900,4,1,4,body
 Henny Penny:normal:400,2,1,7,header
-Hermeneus One:normal:400,3,1,7,body
 Herr Von Muellerhoff:normal:400,2,9,4,header
+Hi Melody:normal:400,-1,-1,-1,?
+Hind Guntur:normal:300,-1,-1,-1,?
+Hind Guntur:normal:400,-1,-1,-1,?
+Hind Guntur:normal:500,-1,-1,-1,?
+Hind Guntur:normal:600,-1,-1,-1,?
+Hind Guntur:normal:700,-1,-1,-1,?
+Hind Madurai:normal:300,-1,-1,-1,?
+Hind Madurai:normal:400,-1,-1,-1,?
+Hind Madurai:normal:500,-1,-1,-1,?
+Hind Madurai:normal:600,-1,-1,-1,?
+Hind Madurai:normal:700,-1,-1,-1,?
+Hind Siliguri:normal:300,-1,-1,-1,?
+Hind Siliguri:normal:400,-1,-1,-1,?
+Hind Siliguri:normal:500,-1,-1,-1,?
+Hind Siliguri:normal:600,-1,-1,-1,?
+Hind Siliguri:normal:700,-1,-1,-1,?
+Hind Vadodara:normal:300,-1,-1,-1,?
+Hind Vadodara:normal:400,-1,-1,-1,?
+Hind Vadodara:normal:500,-1,-1,-1,?
+Hind Vadodara:normal:600,-1,-1,-1,?
+Hind Vadodara:normal:700,-1,-1,-1,?
 Hind:normal:300,2,1,7,header
 Hind:normal:400,2,1,7,body
 Hind:normal:500,3,1,7,body
@@ -608,6 +937,62 @@ Hind:normal:700,4,1,7,header
 Holtwood One SC:normal:400,5,1,9,header
 Homemade Apple:normal:400,2,6,8,header
 Homenaje:normal:400,3,1,5,header
+IBM Plex Mono:italic:100,-1,-1,-1,?
+IBM Plex Mono:italic:200,-1,-1,-1,?
+IBM Plex Mono:italic:300,-1,-1,-1,?
+IBM Plex Mono:italic:400,-1,-1,-1,?
+IBM Plex Mono:italic:500,-1,-1,-1,?
+IBM Plex Mono:italic:600,-1,-1,-1,?
+IBM Plex Mono:italic:700,-1,-1,-1,?
+IBM Plex Mono:normal:100,-1,-1,-1,?
+IBM Plex Mono:normal:200,-1,-1,-1,?
+IBM Plex Mono:normal:300,-1,-1,-1,?
+IBM Plex Mono:normal:400,-1,-1,-1,?
+IBM Plex Mono:normal:500,-1,-1,-1,?
+IBM Plex Mono:normal:600,-1,-1,-1,?
+IBM Plex Mono:normal:700,-1,-1,-1,?
+IBM Plex Sans Condensed:italic:100,-1,-1,-1,?
+IBM Plex Sans Condensed:italic:200,-1,-1,-1,?
+IBM Plex Sans Condensed:italic:300,-1,-1,-1,?
+IBM Plex Sans Condensed:italic:400,-1,-1,-1,?
+IBM Plex Sans Condensed:italic:500,-1,-1,-1,?
+IBM Plex Sans Condensed:italic:600,-1,-1,-1,?
+IBM Plex Sans Condensed:italic:700,-1,-1,-1,?
+IBM Plex Sans Condensed:normal:100,-1,-1,-1,?
+IBM Plex Sans Condensed:normal:200,-1,-1,-1,?
+IBM Plex Sans Condensed:normal:300,-1,-1,-1,?
+IBM Plex Sans Condensed:normal:400,-1,-1,-1,?
+IBM Plex Sans Condensed:normal:500,-1,-1,-1,?
+IBM Plex Sans Condensed:normal:600,-1,-1,-1,?
+IBM Plex Sans Condensed:normal:700,-1,-1,-1,?
+IBM Plex Sans:italic:100,-1,-1,-1,?
+IBM Plex Sans:italic:200,-1,-1,-1,?
+IBM Plex Sans:italic:300,-1,-1,-1,?
+IBM Plex Sans:italic:400,-1,-1,-1,?
+IBM Plex Sans:italic:500,-1,-1,-1,?
+IBM Plex Sans:italic:600,-1,-1,-1,?
+IBM Plex Sans:italic:700,-1,-1,-1,?
+IBM Plex Sans:normal:100,-1,-1,-1,?
+IBM Plex Sans:normal:200,-1,-1,-1,?
+IBM Plex Sans:normal:300,-1,-1,-1,?
+IBM Plex Sans:normal:400,-1,-1,-1,?
+IBM Plex Sans:normal:500,-1,-1,-1,?
+IBM Plex Sans:normal:600,-1,-1,-1,?
+IBM Plex Sans:normal:700,-1,-1,-1,?
+IBM Plex Serif:italic:100,-1,-1,-1,?
+IBM Plex Serif:italic:200,-1,-1,-1,?
+IBM Plex Serif:italic:300,-1,-1,-1,?
+IBM Plex Serif:italic:400,-1,-1,-1,?
+IBM Plex Serif:italic:500,-1,-1,-1,?
+IBM Plex Serif:italic:600,-1,-1,-1,?
+IBM Plex Serif:italic:700,-1,-1,-1,?
+IBM Plex Serif:normal:100,-1,-1,-1,?
+IBM Plex Serif:normal:200,-1,-1,-1,?
+IBM Plex Serif:normal:300,-1,-1,-1,?
+IBM Plex Serif:normal:400,-1,-1,-1,?
+IBM Plex Serif:normal:500,-1,-1,-1,?
+IBM Plex Serif:normal:600,-1,-1,-1,?
+IBM Plex Serif:normal:700,-1,-1,-1,?
 IM Fell DW Pica SC:normal:400,2,1,7,header
 IM Fell DW Pica:italic:400,3,7,6,header
 IM Fell DW Pica:normal:400,3,1,6,header
@@ -640,7 +1025,9 @@ Inknut Antiqua:normal:700,3,1,8,header
 Inknut Antiqua:normal:800,3,1,8,header
 Inknut Antiqua:normal:900,3,1,9,header
 Irish Grover:normal:400,3,1,7,header
+Istok Web:italic:400,-1,-1,-1,?
 Istok Web:italic:700,3,4,7,header
+Istok Web:normal:400,-1,-1,-1,?
 Istok Web:normal:700,3,1,7,header
 Italiana:normal:400,2,1,7,header
 Italianno:normal:400,2,8,4,header
@@ -653,7 +1040,6 @@ Jim Nightshade:normal:400,2,4,5,header
 Jockey One:normal:400,4,1,6,header
 Jolly Lodger:normal:400,4,1,2,header
 Jomhuria:normal:400,4,1,3,header
-Josefin Sans Std Light:normal:400,1,1,6,header
 Josefin Sans:italic:100,1,4,6,header
 Josefin Sans:italic:300,2,3,6,header
 Josefin Sans:italic:400,3,3,6,header
@@ -675,6 +1061,7 @@ Josefin Slab:normal:400,2,1,7,header
 Josefin Slab:normal:600,2,1,7,header
 Josefin Slab:normal:700,3,1,7,body
 Joti One:normal:400,3,1,8,header
+Jua:normal:400,-1,-1,-1,?
 Judson:italic:400,2,4,7,header
 Judson:normal:400,2,1,7,body
 Judson:normal:700,3,1,7,header
@@ -685,6 +1072,7 @@ Jura:normal:300,2,1,7,header
 Jura:normal:400,2,1,7,header
 Jura:normal:500,2,1,7,header
 Jura:normal:600,2,1,8,body
+Jura:normal:700,-1,-1,-1,?
 Just Another Hand:normal:400,4,1,1,header
 Just Me Again Down Here:normal:400,2,1,5,header
 Kadwa:normal:400,2,1,5,body
@@ -712,6 +1100,9 @@ Kanit:normal:600,4,1,4,body
 Kanit:normal:700,4,1,4,body
 Kanit:normal:800,4,1,4,body
 Kanit:normal:900,5,1,4,body
+Kantumruy:normal:300,-1,-1,-1,?
+Kantumruy:normal:400,-1,-1,-1,?
+Kantumruy:normal:700,-1,-1,-1,?
 Karla:italic:400,2,2,6,header
 Karla:italic:700,3,2,7,header
 Karla:normal:400,2,1,7,body
@@ -725,23 +1116,34 @@ Katibeh:normal:400,4,1,3,header
 Kaushan Script:normal:400,3,7,6,header
 Kavivanar:normal:400,2,1,3,header
 Kavoon:normal:400,5,1,8,header
+Kdam Thmor:normal:400,-1,-1,-1,?
 Keania One:normal:400,4,1,7,header
 Kelly Slab:normal:400,3,1,7,body
 Kenia:normal:400,5,1,6,body
+Khand:normal:300,-1,-1,-1,?
+Khand:normal:400,-1,-1,-1,?
 Khand:normal:500,3,1,6,body
+Khand:normal:600,-1,-1,-1,?
+Khand:normal:700,-1,-1,-1,?
+Khmer:normal:400,-1,-1,-1,?
 Khula:normal:300,2,1,7,header
 Khula:normal:400,2,1,7,body
+Khula:normal:600,-1,-1,-1,?
 Khula:normal:700,4,1,7,header
 Khula:normal:800,4,1,8,header
+Kirang Haerang:normal:400,-1,-1,-1,?
 Kite One:normal:400,2,4,7,header
 Knewave:normal:400,4,7,7,header
 Kotta One:normal:400,2,3,7,header
+Koulen:normal:400,-1,-1,-1,?
 Kranky:normal:400,2,1,7,header
 Kreon:normal:300,2,1,6,body
 Kreon:normal:400,3,1,6,body
 Kreon:normal:700,3,1,7,header
 Kristi:normal:400,2,7,1,header
 Krona One:normal:400,3,1,9,header
+Kumar One Outline:normal:400,-1,-1,-1,?
+Kumar One:normal:400,-1,-1,-1,?
 Kurale:normal:400,2,1,3,header
 La Belle Aurore:normal:400,2,8,7,header
 Laila:normal:300,2,1,7,header
@@ -750,6 +1152,7 @@ Laila:normal:500,2,1,7,body
 Laila:normal:600,3,1,8,header
 Laila:normal:700,3,1,8,header
 Lakki Reddy:normal:400,3,1,7,body
+Lalezar:normal:400,-1,-1,-1,?
 Lancelot:normal:400,2,1,6,body
 Lateef:normal:400,2,1,5,body
 Lato:italic:100,1,6,6,header
@@ -769,15 +1172,39 @@ Lekton:italic:400,2,4,7,header
 Lekton:normal:400,2,1,7,header
 Lekton:normal:700,4,1,7,header
 Lemon:normal:400,5,4,8,header
+Lemonada:normal:300,-1,-1,-1,?
+Lemonada:normal:400,-1,-1,-1,?
+Lemonada:normal:600,-1,-1,-1,?
+Lemonada:normal:700,-1,-1,-1,?
+Libre Barcode 128 Text:normal:400,-1,-1,-1,?
+Libre Barcode 128:normal:400,-1,-1,-1,?
+Libre Barcode 39 Extended Text:normal:400,-1,-1,-1,?
+Libre Barcode 39 Extended:normal:400,-1,-1,-1,?
+Libre Barcode 39 Text:normal:400,-1,-1,-1,?
+Libre Barcode 39:normal:400,-1,-1,-1,?
 Libre Baskerville:italic:400,3,5,7,header
 Libre Baskerville:normal:400,3,1,8,body
 Libre Baskerville:normal:700,3,1,8,header
-Libre Caslon Text:italic:400,3,7,7,header
-Libre Caslon Text:normal:400,3,1,7,header
-Libre Caslon Text:normal:700,3,1,8,header
+Libre Franklin:italic:100,-1,-1,-1,?
+Libre Franklin:italic:200,-1,-1,-1,?
+Libre Franklin:italic:300,-1,-1,-1,?
+Libre Franklin:italic:400,-1,-1,-1,?
+Libre Franklin:italic:500,-1,-1,-1,?
+Libre Franklin:italic:600,-1,-1,-1,?
+Libre Franklin:italic:700,-1,-1,-1,?
+Libre Franklin:italic:800,-1,-1,-1,?
+Libre Franklin:italic:900,-1,-1,-1,?
+Libre Franklin:normal:100,-1,-1,-1,?
+Libre Franklin:normal:200,-1,-1,-1,?
+Libre Franklin:normal:300,-1,-1,-1,?
+Libre Franklin:normal:400,-1,-1,-1,?
+Libre Franklin:normal:500,-1,-1,-1,?
+Libre Franklin:normal:600,-1,-1,-1,?
+Libre Franklin:normal:700,-1,-1,-1,?
+Libre Franklin:normal:800,-1,-1,-1,?
+Libre Franklin:normal:900,-1,-1,-1,?
 Life Savers:normal:400,2,1,7,header
 Life Savers:normal:700,2,1,7,header
-Life Savers:normal:800,3,1,7,header
 Lilita One:normal:400,5,1,7,header
 Lily Script One:normal:400,4,3,7,header
 Limelight:normal:400,4,1,8,header
@@ -791,7 +1218,10 @@ Lobster:normal:400,3,5,6,header
 Londrina Outline:normal:400,1,1,6,header
 Londrina Shadow:normal:400,2,1,6,header
 Londrina Sketch:normal:400,1,1,6,header
+Londrina Solid:normal:100,-1,-1,-1,?
+Londrina Solid:normal:300,-1,-1,-1,?
 Londrina Solid:normal:400,5,1,6,header
+Londrina Solid:normal:900,-1,-1,-1,?
 Lora:italic:400,2,2,7,header
 Lora:italic:700,3,3,7,header
 Lora:normal:400,2,1,7,body
@@ -805,12 +1235,33 @@ Lusitana:normal:700,3,1,7,header
 Lustria:normal:400,2,1,7,body
 Macondo Swash Caps:normal:400,2,1,7,header
 Macondo:normal:400,2,1,7,header
+Mada:normal:200,-1,-1,-1,?
+Mada:normal:300,-1,-1,-1,?
+Mada:normal:400,-1,-1,-1,?
+Mada:normal:500,-1,-1,-1,?
+Mada:normal:600,-1,-1,-1,?
+Mada:normal:700,-1,-1,-1,?
+Mada:normal:900,-1,-1,-1,?
 Magra:normal:400,3,1,6,body
 Magra:normal:700,4,1,7,header
 Maiden Orange:normal:400,4,1,5,body
+Maitree:normal:200,-1,-1,-1,?
+Maitree:normal:300,-1,-1,-1,?
+Maitree:normal:400,-1,-1,-1,?
+Maitree:normal:500,-1,-1,-1,?
+Maitree:normal:600,-1,-1,-1,?
+Maitree:normal:700,-1,-1,-1,?
 Mako:normal:400,2,1,7,body
 Mallanna:normal:400,2,1,6,body
 Mandali:normal:400,2,1,7,body
+Manuale:italic:400,-1,-1,-1,?
+Manuale:italic:500,-1,-1,-1,?
+Manuale:italic:600,-1,-1,-1,?
+Manuale:italic:700,-1,-1,-1,?
+Manuale:normal:400,-1,-1,-1,?
+Manuale:normal:500,-1,-1,-1,?
+Manuale:normal:600,-1,-1,-1,?
+Manuale:normal:700,-1,-1,-1,?
 Marcellus SC:normal:400,2,1,7,header
 Marcellus:normal:400,2,1,7,body
 Marck Script:normal:400,2,7,7,header
@@ -824,6 +1275,7 @@ Martel Sans:normal:600,2,1,4,body
 Martel Sans:normal:700,3,1,4,body
 Martel Sans:normal:800,3,1,4,body
 Martel Sans:normal:900,4,1,4,body
+Martel:normal:200,-1,-1,-1,?
 Martel:normal:300,2,1,4,body
 Martel:normal:400,2,1,4,body
 Martel:normal:600,2,1,4,body
@@ -845,9 +1297,9 @@ McLaren:normal:400,2,1,8,header
 Meddon:normal:400,2,5,4,header
 MedievalSharp:normal:400,3,1,7,body
 Medula One:normal:400,4,1,1,header
+Meera Inimai:normal:400,-1,-1,-1,?
 Megrim:normal:400,1,1,7,header
 Meie Script:normal:400,2,9,6,header
-Merge One:normal:400,2,1,7,body
 Merienda One:normal:400,3,3,8,header
 Merienda:normal:400,2,3,8,header
 Merienda:normal:700,3,3,8,header
@@ -867,22 +1319,33 @@ Merriweather:normal:300,2,1,8,header
 Merriweather:normal:400,3,1,8,header
 Merriweather:normal:700,3,1,8,header
 Merriweather:normal:900,4,1,8,header
-Mervale Script:normal:400,3,7,4,header
 Metal Mania:normal:400,3,1,6,header
+Metal:normal:400,-1,-1,-1,?
 Metamorphous:normal:400,3,1,8,body
 Metrophobic:normal:400,2,1,7,body
-Miama:italic:400,1,8,8,header
 Michroma:normal:400,2,1,8,header
 Milonga:normal:400,3,1,7,body
 Miltonian Tattoo:normal:400,3,1,8,header
 Miltonian:normal:400,2,1,8,header
+Mina:normal:400,-1,-1,-1,?
+Mina:normal:700,-1,-1,-1,?
 Miniver:normal:400,3,5,7,header
 Miriam Libre:normal:400,2,1,3,body
 Miriam Libre:normal:700,3,1,3,body
+Mirza:normal:400,-1,-1,-1,?
+Mirza:normal:500,-1,-1,-1,?
+Mirza:normal:600,-1,-1,-1,?
+Mirza:normal:700,-1,-1,-1,?
 Miss Fajardose:normal:400,2,9,3,header
-Miss Saint Delafield:normal:400,2,9,4,header
+Mitr:normal:200,-1,-1,-1,?
+Mitr:normal:300,-1,-1,-1,?
+Mitr:normal:400,-1,-1,-1,?
+Mitr:normal:500,-1,-1,-1,?
+Mitr:normal:600,-1,-1,-1,?
+Mitr:normal:700,-1,-1,-1,?
 Modak:normal:400,6,1,4,header
 Modern Antiqua:normal:400,3,1,8,header
+Mogra:normal:400,-1,-1,-1,?
 Molengo:normal:400,2,1,7,body
 Molle:italic:400,4,8,7,header
 Monda:normal:400,2,1,7,header
@@ -892,40 +1355,107 @@ Monoton:normal:400,3,1,8,header
 Monsieur La Doulaise:normal:400,1,10,5,header
 Montaga:normal:400,2,1,7,body
 Montez:normal:400,2,1,5,header
+Montserrat Alternates:italic:100,-1,-1,-1,?
+Montserrat Alternates:italic:200,-1,-1,-1,?
+Montserrat Alternates:italic:300,-1,-1,-1,?
+Montserrat Alternates:italic:400,-1,-1,-1,?
+Montserrat Alternates:italic:500,-1,-1,-1,?
+Montserrat Alternates:italic:600,-1,-1,-1,?
+Montserrat Alternates:italic:700,-1,-1,-1,?
+Montserrat Alternates:italic:800,-1,-1,-1,?
+Montserrat Alternates:italic:900,-1,-1,-1,?
+Montserrat Alternates:normal:100,-1,-1,-1,?
+Montserrat Alternates:normal:200,-1,-1,-1,?
+Montserrat Alternates:normal:300,-1,-1,-1,?
 Montserrat Alternates:normal:400,2,1,8,header
+Montserrat Alternates:normal:500,-1,-1,-1,?
+Montserrat Alternates:normal:600,-1,-1,-1,?
 Montserrat Alternates:normal:700,4,1,8,header
+Montserrat Alternates:normal:800,-1,-1,-1,?
+Montserrat Alternates:normal:900,-1,-1,-1,?
 Montserrat Subrayada:normal:400,3,1,8,header
 Montserrat Subrayada:normal:700,4,1,8,header
+Montserrat:italic:100,-1,-1,-1,?
+Montserrat:italic:200,-1,-1,-1,?
+Montserrat:italic:300,-1,-1,-1,?
+Montserrat:italic:400,-1,-1,-1,?
+Montserrat:italic:500,-1,-1,-1,?
+Montserrat:italic:600,-1,-1,-1,?
+Montserrat:italic:700,-1,-1,-1,?
+Montserrat:italic:800,-1,-1,-1,?
+Montserrat:italic:900,-1,-1,-1,?
 Montserrat:normal:100,1,1,7,header
+Montserrat:normal:200,-1,-1,-1,?
 Montserrat:normal:300,2,1,8,body
 Montserrat:normal:400,2,1,8,header
+Montserrat:normal:500,-1,-1,-1,?
+Montserrat:normal:600,-1,-1,-1,?
 Montserrat:normal:700,4,1,8,header
+Montserrat:normal:800,-1,-1,-1,?
 Montserrat:normal:900,5,1,8,header
+Moul:normal:400,-1,-1,-1,?
+Moulpali:normal:400,-1,-1,-1,?
 Mountains of Christmas:normal:400,2,1,6,header
 Mountains of Christmas:normal:700,2,1,6,body
 Mouse Memoirs:normal:400,4,1,2,header
-Mr Bedford:normal:400,2,1,6,header
 Mr Bedfort:normal:400,2,1,6,header
 Mr Dafoe:normal:400,3,10,6,header
 Mr De Haviland:normal:400,2,9,4,header
 Mrs Saint Delafield:normal:400,2,9,4,header
 Mrs Sheppards:normal:400,5,10,5,header
+Mukta Mahee:normal:200,-1,-1,-1,?
+Mukta Mahee:normal:300,-1,-1,-1,?
+Mukta Mahee:normal:400,-1,-1,-1,?
+Mukta Mahee:normal:500,-1,-1,-1,?
+Mukta Mahee:normal:600,-1,-1,-1,?
+Mukta Mahee:normal:700,-1,-1,-1,?
+Mukta Mahee:normal:800,-1,-1,-1,?
+Mukta Malar:normal:200,-1,-1,-1,?
+Mukta Malar:normal:300,-1,-1,-1,?
+Mukta Malar:normal:400,-1,-1,-1,?
+Mukta Malar:normal:500,-1,-1,-1,?
+Mukta Malar:normal:600,-1,-1,-1,?
+Mukta Malar:normal:700,-1,-1,-1,?
+Mukta Malar:normal:800,-1,-1,-1,?
+Mukta Vaani:normal:200,-1,-1,-1,?
+Mukta Vaani:normal:300,-1,-1,-1,?
+Mukta Vaani:normal:400,-1,-1,-1,?
+Mukta Vaani:normal:500,-1,-1,-1,?
+Mukta Vaani:normal:600,-1,-1,-1,?
+Mukta Vaani:normal:700,-1,-1,-1,?
+Mukta Vaani:normal:800,-1,-1,-1,?
+Mukta:normal:200,-1,-1,-1,?
+Mukta:normal:300,-1,-1,-1,?
+Mukta:normal:400,-1,-1,-1,?
+Mukta:normal:500,-1,-1,-1,?
+Mukta:normal:600,-1,-1,-1,?
+Mukta:normal:700,-1,-1,-1,?
+Mukta:normal:800,-1,-1,-1,?
+Muli:italic:200,-1,-1,-1,?
 Muli:italic:300,2,2,7,header
 Muli:italic:400,2,2,7,header
+Muli:italic:600,-1,-1,-1,?
+Muli:italic:700,-1,-1,-1,?
+Muli:italic:800,-1,-1,-1,?
+Muli:italic:900,-1,-1,-1,?
+Muli:normal:200,-1,-1,-1,?
 Muli:normal:300,2,1,7,header
 Muli:normal:400,2,1,7,body
+Muli:normal:600,-1,-1,-1,?
+Muli:normal:700,-1,-1,-1,?
+Muli:normal:800,-1,-1,-1,?
+Muli:normal:900,-1,-1,-1,?
 Mystery Quest:normal:400,3,1,7,header
-NATS:normal:400,2,1,6,body
 NTR:normal:400,2,1,6,body
 Nanum Brush Script:normal:400,2,1,5,header
 Nanum Gothic Coding:normal:400,3,1,10,header
 Nanum Gothic Coding:normal:700,3,1,10,body
 Nanum Gothic:normal:400,2,1,7,body
-Nanum Gothic:normal:600,4,1,7,body
 Nanum Gothic:normal:700,4,1,7,header
+Nanum Gothic:normal:800,-1,-1,-1,?
 Nanum Myeongjo:normal:400,2,1,7,header
-Nanum Myeongjo:normal:600,3,1,7,body
 Nanum Myeongjo:normal:700,3,1,7,header
+Nanum Myeongjo:normal:800,-1,-1,-1,?
 Nanum Pen Script:normal:400,2,1,6,header
 Neucha:normal:400,3,1,6,body
 Neuton:italic:400,2,4,6,header
@@ -945,8 +1475,9 @@ Nobile:italic:700,3,4,7,header
 Nobile:normal:400,3,1,7,body
 Nobile:normal:500,4,1,8,body
 Nobile:normal:700,5,1,8,header
+Nokora:normal:400,-1,-1,-1,?
+Nokora:normal:700,-1,-1,-1,?
 Norican:normal:400,3,5,6,header
-Nosifer Caps:normal:400,4,1,9,header
 Nosifer:normal:400,4,1,9,header
 Nothing You Could Do:normal:400,2,8,8,header
 Noticia Text:italic:400,3,3,7,header
@@ -970,11 +1501,35 @@ Nova Script:normal:400,3,4,7,header
 Nova Slim:normal:400,3,1,7,header
 Nova Square:normal:400,3,1,7,header
 Numans:normal:400,3,1,8,body
+Nunito Sans:italic:200,-1,-1,-1,?
+Nunito Sans:italic:300,-1,-1,-1,?
+Nunito Sans:italic:400,-1,-1,-1,?
+Nunito Sans:italic:600,-1,-1,-1,?
+Nunito Sans:italic:700,-1,-1,-1,?
+Nunito Sans:italic:800,-1,-1,-1,?
+Nunito Sans:italic:900,-1,-1,-1,?
+Nunito Sans:normal:200,-1,-1,-1,?
+Nunito Sans:normal:300,-1,-1,-1,?
+Nunito Sans:normal:400,-1,-1,-1,?
+Nunito Sans:normal:600,-1,-1,-1,?
+Nunito Sans:normal:700,-1,-1,-1,?
+Nunito Sans:normal:800,-1,-1,-1,?
+Nunito Sans:normal:900,-1,-1,-1,?
+Nunito:italic:200,-1,-1,-1,?
+Nunito:italic:300,-1,-1,-1,?
+Nunito:italic:400,-1,-1,-1,?
+Nunito:italic:600,-1,-1,-1,?
+Nunito:italic:700,-1,-1,-1,?
+Nunito:italic:800,-1,-1,-1,?
+Nunito:italic:900,-1,-1,-1,?
+Nunito:normal:200,-1,-1,-1,?
 Nunito:normal:300,2,1,7,body
 Nunito:normal:400,2,1,7,header
+Nunito:normal:600,-1,-1,-1,?
 Nunito:normal:700,3,1,8,header
-OFL Sorts Mill Goudy TT:italic:400,2,4,6,header
-OFL Sorts Mill Goudy TT:normal:400,2,1,7,body
+Nunito:normal:800,-1,-1,-1,?
+Nunito:normal:900,-1,-1,-1,?
+Odor Mean Chey:normal:400,-1,-1,-1,?
 Offside:normal:400,2,1,8,body
 Old Standard TT:italic:400,2,5,7,header
 Old Standard TT:normal:400,2,1,7,body
@@ -1006,8 +1561,11 @@ Oregano:italic:400,3,9,6,header
 Oregano:normal:400,2,1,5,body
 Orienta:normal:400,3,1,7,body
 Original Surfer:normal:400,3,1,7,header
+Oswald:normal:200,-1,-1,-1,?
 Oswald:normal:300,3,1,5,body
 Oswald:normal:400,3,1,6,body
+Oswald:normal:500,-1,-1,-1,?
+Oswald:normal:600,-1,-1,-1,?
 Oswald:normal:700,4,1,6,header
 Over the Rainbow:normal:400,2,1,7,header
 Overlock SC:normal:400,2,1,7,header
@@ -1017,6 +1575,26 @@ Overlock:italic:900,4,3,7,header
 Overlock:normal:400,2,1,6,body
 Overlock:normal:700,3,1,7,body
 Overlock:normal:900,4,1,7,header
+Overpass Mono:normal:300,-1,-1,-1,?
+Overpass Mono:normal:400,-1,-1,-1,?
+Overpass Mono:normal:600,-1,-1,-1,?
+Overpass Mono:normal:700,-1,-1,-1,?
+Overpass:italic:100,-1,-1,-1,?
+Overpass:italic:200,-1,-1,-1,?
+Overpass:italic:300,-1,-1,-1,?
+Overpass:italic:400,-1,-1,-1,?
+Overpass:italic:600,-1,-1,-1,?
+Overpass:italic:700,-1,-1,-1,?
+Overpass:italic:800,-1,-1,-1,?
+Overpass:italic:900,-1,-1,-1,?
+Overpass:normal:100,-1,-1,-1,?
+Overpass:normal:200,-1,-1,-1,?
+Overpass:normal:300,-1,-1,-1,?
+Overpass:normal:400,-1,-1,-1,?
+Overpass:normal:600,-1,-1,-1,?
+Overpass:normal:700,-1,-1,-1,?
+Overpass:normal:800,-1,-1,-1,?
+Overpass:normal:900,-1,-1,-1,?
 Ovo:normal:400,2,1,7,header
 Oxygen Mono:normal:400,2,1,8,header
 Oxygen:normal:300,2,1,7,header
@@ -1038,6 +1616,8 @@ PT Serif:italic:700,3,4,7,header
 PT Serif:normal:400,2,1,7,body
 PT Serif:normal:700,3,1,7,header
 Pacifico:normal:400,3,4,6,header
+Padauk:normal:400,-1,-1,-1,?
+Padauk:normal:700,-1,-1,-1,?
 Palanquin Dark:normal:400,3,1,7,header
 Palanquin Dark:normal:500,3,1,7,header
 Palanquin Dark:normal:600,3,1,7,header
@@ -1049,6 +1629,7 @@ Palanquin:normal:400,2,1,5,body
 Palanquin:normal:500,2,1,5,header
 Palanquin:normal:600,2,1,5,header
 Palanquin:normal:700,3,1,6,header
+Pangolin:normal:400,-1,-1,-1,?
 Paprika:normal:400,3,3,8,header
 Parisienne:normal:400,2,8,6,header
 Passero One:normal:400,3,1,6,header
@@ -1058,9 +1639,10 @@ Passion One:normal:900,6,1,7,header
 Pathway Gothic One:normal:400,3,1,5,header
 Patrick Hand SC:normal:400,2,1,6,header
 Patrick Hand:normal:400,2,1,6,header
+Pattaya:normal:400,-1,-1,-1,?
 Patua One:normal:400,4,1,7,header
+Pavanam:normal:400,-1,-1,-1,?
 Paytone One:normal:400,4,1,8,header
-Pecita:normal:400,2,1,7,header
 Peddana:normal:400,2,1,5,body
 Peralta:normal:400,4,1,8,header
 Permanent Marker:normal:400,4,6,8,header
@@ -1090,28 +1672,79 @@ Playfair Display:normal:400,2,1,7,header
 Playfair Display:normal:700,3,1,7,header
 Playfair Display:normal:900,3,1,7,header
 Podkova:normal:400,3,1,7,body
+Podkova:normal:500,-1,-1,-1,?
+Podkova:normal:600,-1,-1,-1,?
 Podkova:normal:700,3,1,7,header
-Poetsen One:normal:400,4,3,7,header
+Podkova:normal:800,-1,-1,-1,?
 Poiret One:normal:400,1,1,7,header
 Poller One:normal:400,4,1,8,header
 Poly:italic:400,3,4,7,header
 Poly:normal:400,3,1,7,body
 Pompiere:normal:400,2,1,5,header
 Pontano Sans:normal:400,2,1,7,body
+Poor Story:normal:400,-1,-1,-1,?
+Poppins:italic:100,-1,-1,-1,?
+Poppins:italic:200,-1,-1,-1,?
+Poppins:italic:300,-1,-1,-1,?
+Poppins:italic:400,-1,-1,-1,?
+Poppins:italic:500,-1,-1,-1,?
+Poppins:italic:600,-1,-1,-1,?
+Poppins:italic:700,-1,-1,-1,?
+Poppins:italic:800,-1,-1,-1,?
+Poppins:italic:900,-1,-1,-1,?
+Poppins:normal:100,-1,-1,-1,?
+Poppins:normal:200,-1,-1,-1,?
 Poppins:normal:300,2,1,8,body
 Poppins:normal:400,2,1,8,body
 Poppins:normal:500,3,1,8,header
 Poppins:normal:600,3,1,8,header
+Poppins:normal:700,-1,-1,-1,?
+Poppins:normal:800,-1,-1,-1,?
+Poppins:normal:900,-1,-1,-1,?
 Port Lligat Sans:normal:400,3,1,6,body
 Port Lligat Slab:normal:400,3,1,6,header
-Porter Sans Block:normal:400,4,1,10,header
 Pragati Narrow:normal:400,2,1,3,body
 Pragati Narrow:normal:700,3,1,3,body
 Prata:normal:400,2,1,7,body
+Preahvihear:normal:400,-1,-1,-1,?
 Press Start 2P:normal:400,5,1,10,header
+Pridi:normal:200,-1,-1,-1,?
+Pridi:normal:300,-1,-1,-1,?
+Pridi:normal:400,-1,-1,-1,?
+Pridi:normal:500,-1,-1,-1,?
+Pridi:normal:600,-1,-1,-1,?
+Pridi:normal:700,-1,-1,-1,?
 Princess Sofia:normal:400,2,3,6,header
 Prociono:normal:400,3,1,7,body
+Prompt:italic:100,-1,-1,-1,?
+Prompt:italic:200,-1,-1,-1,?
+Prompt:italic:300,-1,-1,-1,?
+Prompt:italic:400,-1,-1,-1,?
+Prompt:italic:500,-1,-1,-1,?
+Prompt:italic:600,-1,-1,-1,?
+Prompt:italic:700,-1,-1,-1,?
+Prompt:italic:800,-1,-1,-1,?
+Prompt:italic:900,-1,-1,-1,?
+Prompt:normal:100,-1,-1,-1,?
+Prompt:normal:200,-1,-1,-1,?
+Prompt:normal:300,-1,-1,-1,?
+Prompt:normal:400,-1,-1,-1,?
+Prompt:normal:500,-1,-1,-1,?
+Prompt:normal:600,-1,-1,-1,?
+Prompt:normal:700,-1,-1,-1,?
+Prompt:normal:800,-1,-1,-1,?
+Prompt:normal:900,-1,-1,-1,?
 Prosto One:normal:400,3,1,8,header
+Proza Libre:italic:400,-1,-1,-1,?
+Proza Libre:italic:500,-1,-1,-1,?
+Proza Libre:italic:600,-1,-1,-1,?
+Proza Libre:italic:700,-1,-1,-1,?
+Proza Libre:italic:800,-1,-1,-1,?
+Proza Libre:normal:400,-1,-1,-1,?
+Proza Libre:normal:500,-1,-1,-1,?
+Proza Libre:normal:600,-1,-1,-1,?
+Proza Libre:normal:700,-1,-1,-1,?
+Proza Libre:normal:800,-1,-1,-1,?
 Puritan:italic:400,3,3,7,header
 Puritan:italic:700,3,3,7,header
 Puritan:normal:400,3,1,7,header
@@ -1131,6 +1764,7 @@ Quattrocento:normal:700,3,1,7,header
 Questrial:normal:400,3,1,7,header
 Quicksand:normal:300,1,1,8,header
 Quicksand:normal:400,2,1,8,header
+Quicksand:normal:500,-1,-1,-1,?
 Quicksand:normal:700,3,1,8,header
 Quintessential:normal:400,2,1,6,header
 Qwigley:normal:400,2,7,4,header
@@ -1142,6 +1776,7 @@ Rajdhani:normal:400,2,1,6,header
 Rajdhani:normal:500,2,1,6,header
 Rajdhani:normal:600,3,1,6,header
 Rajdhani:normal:700,4,1,6,header
+Rakkas:normal:400,-1,-1,-1,?
 Raleway Dots:normal:400,1,1,7,header
 Raleway:italic:100,1,4,7,header
 Raleway:italic:200,1,4,7,header
@@ -1172,12 +1807,15 @@ Ranchers:normal:400,5,1,6,body
 Rancho:normal:400,3,1,5,header
 Ranga:normal:400,3,5,5,header
 Ranga:normal:700,4,5,5,header
+Rasa:normal:300,-1,-1,-1,?
+Rasa:normal:400,-1,-1,-1,?
+Rasa:normal:500,-1,-1,-1,?
+Rasa:normal:600,-1,-1,-1,?
+Rasa:normal:700,-1,-1,-1,?
 Rationale:normal:400,3,1,6,body
 Ravi Prakash:normal:400,3,1,6,header
-Redacted Script:normal:400,2,1,7,header
-Redacted Script:normal:700,6,8,8,header
-Redacted:normal:400,11,1,7,header
 Redressed:normal:400,3,1,6,body
+Reem Kufi:normal:400,-1,-1,-1,?
 Reenie Beanie:normal:400,2,1,6,header
 Revalia:normal:400,3,1,9,header
 Rhodium Libre:normal:400,2,1,5,header
@@ -1191,6 +1829,16 @@ Roboto Condensed:italic:700,4,4,6,header
 Roboto Condensed:normal:300,2,1,6,header
 Roboto Condensed:normal:400,3,1,6,body
 Roboto Condensed:normal:700,4,1,6,header
+Roboto Mono:italic:100,-1,-1,-1,?
+Roboto Mono:italic:300,-1,-1,-1,?
+Roboto Mono:italic:400,-1,-1,-1,?
+Roboto Mono:italic:500,-1,-1,-1,?
+Roboto Mono:italic:700,-1,-1,-1,?
+Roboto Mono:normal:100,-1,-1,-1,?
+Roboto Mono:normal:300,-1,-1,-1,?
+Roboto Mono:normal:400,-1,-1,-1,?
+Roboto Mono:normal:500,-1,-1,-1,?
+Roboto Mono:normal:700,-1,-1,-1,?
 Roboto Slab:normal:100,1,1,7,header
 Roboto Slab:normal:300,2,1,7,header
 Roboto Slab:normal:400,3,1,7,header
@@ -1209,9 +1857,15 @@ Roboto:normal:700,4,1,7,header
 Roboto:normal:900,5,1,7,header
 Rochester:normal:400,2,1,5,header
 Rock Salt:normal:400,2,2,8,header
+Rokkitt:normal:100,-1,-1,-1,?
+Rokkitt:normal:200,-1,-1,-1,?
 Rokkitt:normal:300,2,1,7,header
 Rokkitt:normal:400,3,1,6,header
+Rokkitt:normal:500,-1,-1,-1,?
+Rokkitt:normal:600,-1,-1,-1,?
 Rokkitt:normal:700,4,1,7,header
+Rokkitt:normal:800,-1,-1,-1,?
+Rokkitt:normal:900,-1,-1,-1,?
 Romanesco:normal:400,3,6,1,header
 Ropa Sans:italic:400,3,4,7,header
 Ropa Sans:normal:400,3,1,6,header
@@ -1223,6 +1877,17 @@ Rosarivo:italic:400,2,4,7,header
 Rosarivo:normal:400,2,1,7,body
 Rouge Script:normal:400,2,4,5,header
 Rozha One:normal:400,3,1,7,body
+Rubik Mono One:normal:400,-1,-1,-1,?
+Rubik:italic:300,-1,-1,-1,?
+Rubik:italic:400,-1,-1,-1,?
+Rubik:italic:500,-1,-1,-1,?
+Rubik:italic:700,-1,-1,-1,?
+Rubik:italic:900,-1,-1,-1,?
+Rubik:normal:300,-1,-1,-1,?
+Rubik:normal:400,-1,-1,-1,?
+Rubik:normal:500,-1,-1,-1,?
+Rubik:normal:700,-1,-1,-1,?
+Rubik:normal:900,-1,-1,-1,?
 Ruda:normal:400,3,1,7,body
 Ruda:normal:700,3,1,7,header
 Ruda:normal:900,4,1,8,header
@@ -1239,18 +1904,54 @@ Sacramento:normal:400,2,1,5,header
 Sahitya:normal:400,2,1,4,body
 Sahitya:normal:700,3,1,4,body
 Sail:normal:400,2,4,6,header
+Saira Condensed:normal:100,-1,-1,-1,?
+Saira Condensed:normal:200,-1,-1,-1,?
+Saira Condensed:normal:300,-1,-1,-1,?
+Saira Condensed:normal:400,-1,-1,-1,?
+Saira Condensed:normal:500,-1,-1,-1,?
+Saira Condensed:normal:600,-1,-1,-1,?
+Saira Condensed:normal:700,-1,-1,-1,?
+Saira Condensed:normal:800,-1,-1,-1,?
+Saira Condensed:normal:900,-1,-1,-1,?
+Saira Extra Condensed:normal:100,-1,-1,-1,?
+Saira Extra Condensed:normal:200,-1,-1,-1,?
+Saira Extra Condensed:normal:300,-1,-1,-1,?
+Saira Extra Condensed:normal:400,-1,-1,-1,?
+Saira Extra Condensed:normal:500,-1,-1,-1,?
+Saira Extra Condensed:normal:600,-1,-1,-1,?
+Saira Extra Condensed:normal:700,-1,-1,-1,?
+Saira Extra Condensed:normal:800,-1,-1,-1,?
+Saira Extra Condensed:normal:900,-1,-1,-1,?
+Saira Semi Condensed:normal:100,-1,-1,-1,?
+Saira Semi Condensed:normal:200,-1,-1,-1,?
+Saira Semi Condensed:normal:300,-1,-1,-1,?
+Saira Semi Condensed:normal:400,-1,-1,-1,?
+Saira Semi Condensed:normal:500,-1,-1,-1,?
+Saira Semi Condensed:normal:600,-1,-1,-1,?
+Saira Semi Condensed:normal:700,-1,-1,-1,?
+Saira Semi Condensed:normal:800,-1,-1,-1,?
+Saira Semi Condensed:normal:900,-1,-1,-1,?
+Saira:normal:100,-1,-1,-1,?
+Saira:normal:200,-1,-1,-1,?
+Saira:normal:300,-1,-1,-1,?
+Saira:normal:400,-1,-1,-1,?
+Saira:normal:500,-1,-1,-1,?
+Saira:normal:600,-1,-1,-1,?
+Saira:normal:700,-1,-1,-1,?
+Saira:normal:800,-1,-1,-1,?
+Saira:normal:900,-1,-1,-1,?
 Salsa:normal:400,3,1,7,header
 Sanchez:italic:400,2,4,8,header
 Sanchez:normal:400,2,1,8,body
 Sancreek:normal:400,4,1,7,body
-Sansation:normal:300,2,5,7,header
-Sansation:normal:400,3,5,7,body
-Sansation:normal:700,4,4,7,header
-Sansita One:normal:400,4,5,8,header
-Sarabun:italic:400,2,4,5,header
-Sarabun:italic:700,2,5,5,header
-Sarabun:normal:400,1,1,5,header
-Sarabun:normal:700,2,1,5,body
+Sansita:italic:400,-1,-1,-1,?
+Sansita:italic:700,-1,-1,-1,?
+Sansita:italic:800,-1,-1,-1,?
+Sansita:italic:900,-1,-1,-1,?
+Sansita:normal:400,-1,-1,-1,?
+Sansita:normal:700,-1,-1,-1,?
+Sansita:normal:800,-1,-1,-1,?
+Sansita:normal:900,-1,-1,-1,?
 Sarala:normal:400,2,1,5,body
 Sarala:normal:700,3,1,5,body
 Sarina:normal:400,4,7,8,header
@@ -1271,9 +1972,8 @@ Schoolbell:normal:400,3,1,6,header
 Scope One:normal:400,2,1,5,header
 Seaweed Script:normal:400,3,7,6,header
 Secular One:normal:400,3,1,5,header
-Sedan SC:normal:400,2,1,7,header
-Sedan:italic:400,3,8,6,header
-Sedan:normal:400,2,1,7,body
+Sedgwick Ave Display:normal:400,-1,-1,-1,?
+Sedgwick Ave:normal:400,-1,-1,-1,?
 Sevillana:normal:400,2,1,6,header
 Seymour One:normal:400,5,1,9,header
 Shadows Into Light Two:normal:400,2,1,6,header
@@ -1287,6 +1987,8 @@ Share:normal:400,3,1,6,header
 Share:normal:700,4,1,7,header
 Shojumaru:normal:400,4,1,9,header
 Short Stack:normal:400,2,1,8,header
+Shrikhand:normal:400,-1,-1,-1,?
+Siemreap:normal:400,-1,-1,-1,?
 Sigmar One:normal:400,4,1,8,header
 Signika Negative:normal:300,2,1,7,header
 Signika Negative:normal:400,3,1,7,body
@@ -1317,6 +2019,7 @@ Snippet:normal:400,2,1,7,header
 Snowburst One:normal:400,2,1,8,header
 Sofadi One:normal:400,3,1,7,header
 Sofia:normal:400,2,1,7,header
+Song Myung:normal:400,-1,-1,-1,?
 Sonsie One:normal:400,5,6,9,header
 Sorts Mill Goudy:italic:400,2,4,6,header
 Sorts Mill Goudy:normal:400,2,1,7,body
@@ -1342,14 +2045,46 @@ Source Sans Pro:normal:900,4,1,7,header
 Source Serif Pro:normal:400,2,1,7,header
 Source Serif Pro:normal:600,3,1,7,header
 Source Serif Pro:normal:700,3,1,7,header
+Space Mono:italic:400,-1,-1,-1,?
+Space Mono:italic:700,-1,-1,-1,?
+Space Mono:normal:400,-1,-1,-1,?
+Space Mono:normal:700,-1,-1,-1,?
 Special Elite:normal:400,3,1,8,header
+Spectral SC:italic:200,-1,-1,-1,?
+Spectral SC:italic:300,-1,-1,-1,?
+Spectral SC:italic:400,-1,-1,-1,?
+Spectral SC:italic:500,-1,-1,-1,?
+Spectral SC:italic:600,-1,-1,-1,?
+Spectral SC:italic:700,-1,-1,-1,?
+Spectral SC:italic:800,-1,-1,-1,?
+Spectral SC:normal:200,-1,-1,-1,?
+Spectral SC:normal:300,-1,-1,-1,?
+Spectral SC:normal:400,-1,-1,-1,?
+Spectral SC:normal:500,-1,-1,-1,?
+Spectral SC:normal:600,-1,-1,-1,?
+Spectral SC:normal:700,-1,-1,-1,?
+Spectral SC:normal:800,-1,-1,-1,?
+Spectral:italic:200,-1,-1,-1,?
+Spectral:italic:300,-1,-1,-1,?
+Spectral:italic:400,-1,-1,-1,?
+Spectral:italic:500,-1,-1,-1,?
+Spectral:italic:600,-1,-1,-1,?
+Spectral:italic:700,-1,-1,-1,?
+Spectral:italic:800,-1,-1,-1,?
+Spectral:normal:200,-1,-1,-1,?
+Spectral:normal:300,-1,-1,-1,?
+Spectral:normal:400,-1,-1,-1,?
+Spectral:normal:500,-1,-1,-1,?
+Spectral:normal:600,-1,-1,-1,?
+Spectral:normal:700,-1,-1,-1,?
+Spectral:normal:800,-1,-1,-1,?
 Spicy Rice:normal:400,5,1,6,header
 Spinnaker:normal:400,2,1,8,body
 Spirax:normal:400,2,1,7,body
 Squada One:normal:400,4,1,6,header
 Sree Krushnadevaraya:normal:400,2,1,6,body
+Sriracha:normal:400,-1,-1,-1,?
 Stalemate:normal:400,1,1,3,header
-Stalin One:normal:400,4,7,10,header
 Stalinist One:normal:400,4,7,10,header
 Stardos Stencil:normal:400,3,1,7,body
 Stardos Stencil:normal:700,3,1,7,header
@@ -1358,23 +2093,53 @@ Stint Ultra Expanded:normal:400,2,1,8,header
 Stoke:normal:300,2,1,8,header
 Stoke:normal:400,3,1,8,header
 Strait:normal:400,3,1,6,header
-Strong:normal:400,2,1,6,header
+Stylish:normal:400,-1,-1,-1,?
 Sue Ellen Francisco:normal:400,2,1,4,header
 Suez One:normal:400,4,1,5,header
 Sumana:normal:400,2,1,3,body
 Sumana:normal:700,2,1,3,body
+Sunflower:normal:300,-1,-1,-1,?
+Sunflower:normal:500,-1,-1,-1,?
+Sunflower:normal:700,-1,-1,-1,?
 Sunshiney:normal:400,3,1,6,header
 Supermercado One:normal:400,3,1,7,header
 Sura:normal:400,2,1,3,body
 Sura:normal:700,3,1,3,body
 Suranna:normal:400,2,1,6,body
 Suravaram:normal:400,2,1,6,body
+Suwannaphum:normal:400,-1,-1,-1,?
 Swanky and Moo Moo:normal:400,2,1,7,header
 Syncopate:normal:400,2,1,9,header
 Syncopate:normal:700,5,1,9,header
+Tajawal:normal:200,-1,-1,-1,?
+Tajawal:normal:300,-1,-1,-1,?
+Tajawal:normal:400,-1,-1,-1,?
+Tajawal:normal:500,-1,-1,-1,?
+Tajawal:normal:700,-1,-1,-1,?
+Tajawal:normal:800,-1,-1,-1,?
+Tajawal:normal:900,-1,-1,-1,?
 Tangerine:normal:400,1,10,3,header
 Tangerine:normal:700,2,8,4,header
+Taprom:normal:400,-1,-1,-1,?
 Tauri:normal:400,3,1,7,header
+Taviraj:italic:100,-1,-1,-1,?
+Taviraj:italic:200,-1,-1,-1,?
+Taviraj:italic:300,-1,-1,-1,?
+Taviraj:italic:400,-1,-1,-1,?
+Taviraj:italic:500,-1,-1,-1,?
+Taviraj:italic:600,-1,-1,-1,?
+Taviraj:italic:700,-1,-1,-1,?
+Taviraj:italic:800,-1,-1,-1,?
+Taviraj:italic:900,-1,-1,-1,?
+Taviraj:normal:100,-1,-1,-1,?
+Taviraj:normal:200,-1,-1,-1,?
+Taviraj:normal:300,-1,-1,-1,?
+Taviraj:normal:400,-1,-1,-1,?
+Taviraj:normal:500,-1,-1,-1,?
+Taviraj:normal:600,-1,-1,-1,?
+Taviraj:normal:700,-1,-1,-1,?
+Taviraj:normal:800,-1,-1,-1,?
+Taviraj:normal:900,-1,-1,-1,?
 Teko:normal:300,3,1,1,header
 Teko:normal:400,3,1,2,header
 Teko:normal:500,4,1,5,body
@@ -1383,19 +2148,7 @@ Teko:normal:700,5,1,6,header
 Telex:normal:400,3,1,7,body
 Tenali Ramakrishna:normal:400,2,1,6,body
 Tenor Sans:normal:400,2,1,8,body
-Terminal Dosis Light:normal:400,1,1,6,header
-Terminal Dosis:normal:200,1,1,6,header
-Terminal Dosis:normal:300,2,1,6,header
-Terminal Dosis:normal:400,2,1,6,header
-Terminal Dosis:normal:500,2,1,6,body
-Terminal Dosis:normal:600,3,1,6,body
-Terminal Dosis:normal:700,3,1,6,header
-Terminal Dosis:normal:800,4,1,7,header
 Text Me One:normal:400,2,1,7,body
-Thabit:italic:400,2,4,8,header
-Thabit:italic:700,3,4,8,header
-Thabit:normal:400,2,1,8,header
-Thabit:normal:700,3,1,8,header
 The Girl Next Door:normal:400,1,1,7,header
 Tienne:normal:400,3,1,8,header
 Tienne:normal:700,3,1,8,header
@@ -1403,6 +2156,8 @@ Tienne:normal:900,4,1,8,header
 Tillana:normal:400,2,4,7,header
 Tillana:normal:500,2,5,7,header
 Tillana:normal:600,3,4,8,header
+Tillana:normal:700,-1,-1,-1,?
+Tillana:normal:800,-1,-1,-1,?
 Timmana:normal:400,4,3,6,header
 Tinos:italic:400,3,4,6,header
 Tinos:italic:700,3,4,7,header
@@ -1421,15 +2176,29 @@ Titillium Web:normal:600,3,1,7,header
 Titillium Web:normal:700,3,1,7,header
 Titillium Web:normal:900,5,1,7,header
 Trade Winds:normal:400,4,5,8,header
+Trirong:italic:100,-1,-1,-1,?
+Trirong:italic:200,-1,-1,-1,?
+Trirong:italic:300,-1,-1,-1,?
+Trirong:italic:400,-1,-1,-1,?
+Trirong:italic:500,-1,-1,-1,?
+Trirong:italic:600,-1,-1,-1,?
+Trirong:italic:700,-1,-1,-1,?
+Trirong:italic:800,-1,-1,-1,?
+Trirong:italic:900,-1,-1,-1,?
+Trirong:normal:100,-1,-1,-1,?
+Trirong:normal:200,-1,-1,-1,?
+Trirong:normal:300,-1,-1,-1,?
+Trirong:normal:400,-1,-1,-1,?
+Trirong:normal:500,-1,-1,-1,?
+Trirong:normal:600,-1,-1,-1,?
+Trirong:normal:700,-1,-1,-1,?
+Trirong:normal:800,-1,-1,-1,?
+Trirong:normal:900,-1,-1,-1,?
 Trocchi:normal:400,3,1,8,header
 Trochut:italic:400,3,5,6,header
 Trochut:normal:400,3,1,6,body
 Trochut:normal:700,3,1,6,header
 Trykker:normal:400,2,1,8,body
-Tuffy:italic:400,2,5,7,header
-Tuffy:italic:700,3,5,7,header
-Tuffy:normal:400,2,1,7,header
-Tuffy:normal:700,3,1,7,header
 Tulpen One:normal:400,2,1,1,header
 Ubuntu Condensed:normal:400,3,1,6,header
 Ubuntu Mono:italic:400,3,5,7,header
@@ -1453,7 +2222,10 @@ UnifrakturMaguntia:normal:400,3,1,6,header
 Unkempt:normal:400,2,1,7,header
 Unkempt:normal:700,3,1,7,body
 Unlock:normal:400,5,1,8,header
+Unna:italic:400,-1,-1,-1,?
+Unna:italic:700,-1,-1,-1,?
 Unna:normal:400,2,1,6,header
+Unna:normal:700,-1,-1,-1,?
 VT323:normal:400,3,1,6,body
 Vampiro One:normal:400,4,8,8,header
 Varela Round:normal:400,3,1,7,header
@@ -1471,10 +2243,18 @@ Volkhov:italic:400,3,5,7,header
 Volkhov:italic:700,3,5,7,header
 Volkhov:normal:400,3,1,8,header
 Volkhov:normal:700,4,1,8,header
+Vollkorn SC:normal:400,-1,-1,-1,?
+Vollkorn SC:normal:600,-1,-1,-1,?
+Vollkorn SC:normal:700,-1,-1,-1,?
+Vollkorn SC:normal:900,-1,-1,-1,?
 Vollkorn:italic:400,2,4,6,header
+Vollkorn:italic:600,-1,-1,-1,?
 Vollkorn:italic:700,3,4,7,header
+Vollkorn:italic:900,-1,-1,-1,?
 Vollkorn:normal:400,2,1,7,body
+Vollkorn:normal:600,-1,-1,-1,?
 Vollkorn:normal:700,3,1,8,header
+Vollkorn:normal:900,-1,-1,-1,?
 Voltaire:normal:400,3,1,6,body
 Waiting for the Sunrise:normal:400,1,1,6,header
 Wallpoet:normal:400,3,1,8,header
@@ -1502,7 +2282,26 @@ Yantramanav:normal:400,3,1,3,body
 Yantramanav:normal:500,3,1,3,body
 Yantramanav:normal:700,4,1,3,body
 Yantramanav:normal:900,4,1,3,body
+Yatra One:normal:400,-1,-1,-1,?
 Yellowtail:normal:400,3,8,5,header
+Yeon Sung:normal:400,-1,-1,-1,?
 Yeseva One:normal:400,3,1,8,header
 Yesteryear:normal:400,3,7,5,header
+Yrsa:normal:300,-1,-1,-1,?
+Yrsa:normal:400,-1,-1,-1,?
+Yrsa:normal:500,-1,-1,-1,?
+Yrsa:normal:600,-1,-1,-1,?
+Yrsa:normal:700,-1,-1,-1,?
 Zeyada:normal:400,1,1,6,header
+Zilla Slab Highlight:normal:400,-1,-1,-1,?
+Zilla Slab Highlight:normal:700,-1,-1,-1,?
+Zilla Slab:italic:300,-1,-1,-1,?
+Zilla Slab:italic:400,-1,-1,-1,?
+Zilla Slab:italic:500,-1,-1,-1,?
+Zilla Slab:italic:600,-1,-1,-1,?
+Zilla Slab:italic:700,-1,-1,-1,?
+Zilla Slab:normal:300,-1,-1,-1,?
+Zilla Slab:normal:400,-1,-1,-1,?
+Zilla Slab:normal:500,-1,-1,-1,?
+Zilla Slab:normal:600,-1,-1,-1,?
+Zilla Slab:normal:700,-1,-1,-1,?
