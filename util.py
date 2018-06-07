@@ -69,7 +69,7 @@ def find_extremes(d):
   return min(values), max(values)
 
 
-def group_by_weight(filenames):
+def group_by_attributes(filenames):
   """ Classify a set of fonts by their ammount of black ink (percentage of dark
       pixels in a reference paragraph of text) and attribute a normalized score
       from 1 to 10 based on their computed darkness, effectively grouping the
@@ -79,19 +79,34 @@ def group_by_weight(filenames):
       Output: a dict filename:value
               where value is a weight score from 1 (lightest) to 10 (darkest)
   """
-  darkness = {name: compute_darkness_and_width(name)[0] for name in filenames}
+  darkness = {}
+  width = {}
+  for name in filenames:
+    darkness[name], width[name] = compute_darkness_and_width(name)
+
+  # normalize weight values:
   min_dark, max_dark = find_extremes(darkness)
   dark_range = max_dark - min_dark
 
-  # unlikely:
-  if dark_range == 0:
-    return {name: 5 for name in filenames}
+  if dark_range == 0: # unlikely
+    weights = {name: 5 for name in filenames}
+  else:
+    weights = {}
+    for name in filenames:
+      weights[name] = int(1 + floor(10 * ((darkness[name] - min_dark)/ dark_range)))
 
-  weights = {}
-  for name in filenames:
-    weights[name] = int(1 + floor(10 * ((darkness[name] - min_dark)/ dark_range)))
+  # normalize width values:
+  min_width, max_width = find_extremes(width)
+  width_range = max_width - min_width
 
-  return weights
+  if width_range == 0: # unlikely
+    widths = {name: 5 for name in filenames}
+  else:
+    widths = {}
+    for name in filenames:
+      widths[name] = int(1 + floor(10 * ((width[name] - min_width)/ width_range)))
+
+  return weights, widths
 
 
 def save_csv(filename, metadata):

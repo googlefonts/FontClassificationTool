@@ -4,7 +4,7 @@ import sys
 import glob
 from gfn import (GFNs_from_filenames,
                  GFN_from_filename)
-from util import (group_by_weight,
+from util import (group_by_attributes,
                   save_csv,
                   read_csv,
                   is_blacklisted)
@@ -46,7 +46,7 @@ def main():
     print("Will process {} font files.".format(len(files_to_process)))
 
 
-  weights = group_by_weight(files_to_process)
+  weights, widths = group_by_attributes(files_to_process)
   GFNs = GFNs_from_filenames(files_to_process)
 
   metadata = {}
@@ -54,7 +54,8 @@ def main():
     gfn = GFNs[fname]
     if gfn in old_metadata.keys():
       metadata[gfn] = old_metadata[gfn] # preserve every old value
-      metadata[gfn]['weight_int'] = weights[fname] # except the new weight values we have just computed
+      metadata[gfn]['weight_int'] = weights[fname] # except the new weight 
+      metadata[gfn]['width_int'] = widths[fname] # and width values we have just computed
 
   if args.output:
     save_csv(args.output, metadata)
