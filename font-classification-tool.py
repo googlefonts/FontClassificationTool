@@ -40,6 +40,10 @@ from constants import (NAMEID_FONT_FAMILY_NAME,
                        NAMEID_FONT_SUBFAMILY_NAME)
 from gfn import GFN_from_filename
 
+import cairo
+from util import create_cairo_font_face_for_file, PycairoContext
+
+
 DESCRIPTION = """Calculates the visual weight, width or italic angle of fonts.
 
   For width, it just measures the width of how a particular piece of text renders.
@@ -81,34 +85,27 @@ except:
   sys.exit("Needs flask.\n\npip install flask")
 
 
-try:
-  from PIL import (Image,
-                   ImageDraw,
-                   ImageFont)
-except:
-  sys.exit("Needs pillow.\n\npip3 install pillow")
-
-
-
-
-def generate_italic_angle_images():
-  for i in range(10):
-    angle = 30*(float(i)/10) * 3.1415/180
-    width = 2000
-    height = 500
-    lines = 250
-    im = Image.new('RGBA', (width,height), (255,255,255,0))
-    spacing = width/lines
-    draw = ImageDraw.Draw(im)
-    for j in range(lines):
-      draw.line([j*spacing - 400, im.size[1], j*spacing - 400 + im.size[1]*math.tan(angle), 0], fill=(50,50,255,255))
-    del draw
-
-    imagesdir = os.path.join(os.path.dirname(__file__), "font_classification_tool", "images")
-    if not os.path.isdir(imagesdir):
-       os.mkdir(imagesdir)
-    filepath = os.path.join(imagesdir, "angle_{}.png".format(i+1))
-    im.save(filepath, "PNG")
+# At some point we may want to regenerate these images using cairo code
+# but for now I think it is enough to simply usethe generated PNGs commited to the git repo.
+#
+#def generate_italic_angle_images():
+#  for i in range(10):
+#    angle = 30*(float(i)/10) * 3.1415/180
+#    width = 2000
+#    height = 500
+#    lines = 250
+#    im = Image.new('RGBA', (width,height), (255,255,255,0))
+#    spacing = width/lines
+#    draw = ImageDraw.Draw(im)
+#    for j in range(lines):
+#      draw.line([j*spacing - 400, im.size[1], j*spacing - 400 + im.size[1]*math.tan(angle), 0], fill=(50,50,255,255))
+#    del draw
+#
+#    imagesdir = os.path.join(os.path.dirname(__file__), "font_classification_tool", "images")
+#    if not os.path.isdir(imagesdir):
+#       os.mkdir(imagesdir)
+#    filepath = os.path.join(imagesdir, "angle_{}.png".format(i+1))
+#    im.save(filepath, "PNG")
 
 
 def normalize_values(properties, target_max=1.0):
@@ -144,12 +141,6 @@ def map_to_int_range(values, target_min=1, target_max=10):
     integer_values.append(value)
   return integer_values
 
-ITALIC_ANGLE_TEMPLATE = """
-<img height='30%%' src='data:image/png;base64,%s'
-     style="background:url(font_classification_tool/images/angle_%d.png) 0 0 no-repeat;" />
-"""
-
-
 
 def get_angle(ttfont):
   """Returns the italic angle, given a filename of a TTF"""
@@ -163,29 +154,46 @@ FONT_SIZE=30
 LATIN_TEXT = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyZz"
 KHMER_TEXT = "\xE1\x9E\x9A\xE1\x9E\x9B\xE1\x9E\x80\xE1\x9E\x94\xE1\x9E\x80\xE1\x9F\x8B\xE1\x9E\x94\xE1\x9F\x84\xE1\x9E\x80\xE1\x9E\x93\xE1\x9E\xB6\xE1\x9E\x9B\xE1\x9F\x92\xE1\x9E\x84\xE1\x9E\xB6\xE1\x9E\x85\xE1\x9E\x8A\xE1\x9F\x8F\xE1\x9E\x80\xE1\x9E\x8E\xE1\x9F\x92\xE1\x9E\x8F\xE1\x9F\x84\xE1\x9E\x85\xE1\x9E\x80\xE1\x9E\x8E\xE1\x9F\x92\xE1\x9E\x8F\xE1\x9F\x82\xE1\x9E\x84"
 
+
+img_counter=0
 def render_single_line(fontfile, khmer=False):
+  global img_counter
+
   if khmer:
     sample_text = KHMER_TEXT
   else:
     sample_text = LATIN_TEXT
 
-  # Render the test text using the font onto an image.
-  font = ImageFont.truetype(fontfile, FONT_SIZE)
+  face = create_cairo_font_face_for_file(fontfile, 0)
 
+  #dummy surface
+  surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, 0, 0)
+  ctx = cairo.Context(surface)
+  ctx.set_font_face(face)
+  ctx.set_font_size(30)
+  extents = ctx.text_extents(sample_text)
+#  print extents
+  xbearing, ybearing, width, height, _, _ = extents
+
+
+  #actual surface
+  surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, int(width), int(height))
+  ctx = cairo.Context(surface)
+
+  ctx.set_font_face(face)
+  ctx.set_font_size(30)
+  ctx.move_to(-xbearing, -ybearing)
+  ctx.show_text(sample_text)
+
+  del ctx
+
+  img_counter += 1
   try:
-    text_width, text_height = font.getsize(sample_text)
-    img = Image.new('RGBA', (text_width, text_height))
-    draw = ImageDraw.Draw(img)
-    draw.text((0, 0), sample_text, font=font, fill=(0, 0, 0))
-    return get_base64_image(img)
+    surface.write_to_png("font_classification_tool/images/{}.png".format(img_counter))
+    return "<img height='50%%' src='font_classification_tool/images/{}.png' />".format(img_counter)
   except:
-    if khmer:
-      print("Failed to render khmer using '{}'".format(fontfile))
-    else:
-      print("Failed rendering for unknown reason ({})".format(fontfile))
-    return None
-
-
+    print ("Cairo failed to write PNG file for {}".format(fontfile))
+    return ""
 
 def get_base64_image(img):
   """Get the base 64 representation of an image,
@@ -264,14 +272,15 @@ def main():
     ],
     "data": []
   }
-  generate_italic_angle_images()
+  #generate_italic_angle_images()
 
   field_id = 1
   for key in fontinfo:
     values = fontinfo[key]
     img_weight_html = ""
     if values["img_weight"] is not None:
-      img_weight_html = "<img height='50%%' src='data:image/png;base64,%s' />" % (values["img_weight"])
+      img_weight_html = values["img_weight"]
+    #  img_weight_html = "<img height='50%%' src='data:image/png;base64,%s' />" % (values["img_weight"])
 
     values["image"] = img_weight_html
     grid_data["data"].append({"id": field_id, "values": values})
@@ -293,10 +302,13 @@ def main():
     return 'ok'
 
   app = Flask(__name__)
-
   @app.route('/font_classification_tool/<path:path>')
-  def send_js(path):
-    return send_from_directory(os.path.dirname(__file__) + '/font_classification_tool/', path)
+  def send_the_files(path):
+    print (path)
+    if path == 'index.html' or path.endswith('.js'):
+      return send_from_directory(os.path.dirname(__file__) + '/font_classification_tool/', path)
+    else:
+      return send_from_directory(os.path.dirname(__file__), path)
 
   @app.route('/data.json')
   def json_data():

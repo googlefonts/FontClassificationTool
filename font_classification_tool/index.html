@@ -53,7 +53,7 @@ function updateCellValue(grid, rowIndex, columnIndex, oldValue, newValue, row){
 
         if (grid.getColumnName(columnIndex) == "angle_int"){
             var row = grid.getRow(rowIndex);
-            $(row).find("img:first").css("background-image", "url(images/angle_" + newValue + ".png)")
+            $(row).find("img:first").css("background-image", "url(font_classification_tool/images/angle_" + newValue + ".png)")
         }
 
 	$.ajax({
@@ -115,7 +115,7 @@ window.onload = function() {
 
               for (var rowIndex=0; rowIndex < this.getRowCount(); rowIndex ++){
                 var row = this.getRow(rowIndex);
-                $(row).find("img:first").css("background-image", "url(images/angle_" + this.getValueAt(rowIndex, columnIndex) + ".png)");
+                $(row).find("img:first").css("background-image", "url(font_classification_tool/images/angle_" + this.getValueAt(rowIndex, columnIndex) + ".png)");
               }
 
               $('.editablegrid-fontfile').hide();
