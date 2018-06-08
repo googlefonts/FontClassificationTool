@@ -10,6 +10,8 @@ parser.add_argument("-m", "--metadata", default="input.csv", required=True,
                     help="CSV metadata filename")
 parser.add_argument("-k", "--apikey", required=True,
                     help="Google Fonts API key")
+parser.add_argument("-n", "--addnew", action='store_true',
+                    help="Add new fonts")
 
 
 def main():
@@ -31,16 +33,20 @@ def main():
       del metadata[gfn]
 
   # and add the ones that are not yet listed on the old metadata csv:
+  if args.addnew:
+    for gfn in gfonts_GFNs.keys():
+      if gfn not in metadata:
+        metadata[gfn] = {
+          'weight_int': -1,
+          'width_int': -1,
+          'angle_int': -1,
+          'usage': '?',
+        }
+
+  # and update the subsets field:
   for gfn in gfonts_GFNs.keys():
-    if gfn not in metadata:
-      metadata[gfn] = {
-        'weight_int': -1,
-        'width_int': -1,
-        'angle_int': -1,
-        'usage': '?',
-      }
-    # and update the subsets field:
-    metadata[gfn]['subsets'] = "+".join(gfonts_GFNs[gfn])
+    if gfn in metadata:
+      metadata[gfn]['subsets'] = "+".join(gfonts_GFNs[gfn])
 
   # done:
   save_csv(args.metadata, metadata)
