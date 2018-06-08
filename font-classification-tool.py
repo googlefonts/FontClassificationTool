@@ -160,15 +160,21 @@ def get_angle(ttfont):
 FONT_SIZE=30
 # The text used to test weight and width. Note that this could be
 # problematic if a given font doesn't have latin support.
-TEXT = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyZz"
+LATIN_TEXT = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyZz"
+KHMER_TEXT = "\xE1\x9E\x9A\xE1\x9E\x9B\xE1\x9E\x80\xE1\x9E\x94\xE1\x9E\x80\xE1\x9F\x8B\xE1\x9E\x94\xE1\x9F\x84\xE1\x9E\x80\xE1\x9E\x93\xE1\x9E\xB6\xE1\x9E\x9B\xE1\x9F\x92\xE1\x9E\x84\xE1\x9E\xB6\xE1\x9E\x85\xE1\x9E\x8A\xE1\x9F\x8F\xE1\x9E\x80\xE1\x9E\x8E\xE1\x9F\x92\xE1\x9E\x8F\xE1\x9F\x84\xE1\x9E\x85\xE1\x9E\x80\xE1\x9E\x8E\xE1\x9F\x92\xE1\x9E\x8F\xE1\x9F\x82\xE1\x9E\x84"
 
-def render_single_line(fontfile):
+def render_single_line(fontfile, khmer=False):
+  if khmer:
+    sample_text = KHMER_TEXT
+  else:
+    sample_text = LATIN_TEXT
+
   # Render the test text using the font onto an image.
   font = ImageFont.truetype(fontfile, FONT_SIZE)
-  text_width, text_height = font.getsize(TEXT)
+  text_width, text_height = font.getsize(sample_text)
   img = Image.new('RGBA', (text_width, text_height))
   draw = ImageDraw.Draw(img)
-  draw.text((0, 0), TEXT, font=font, fill=(0, 0, 0))
+  draw.text((0, 0), sample_text, font=font, fill=(0, 0, 0))
   return get_base64_image(img)
 
 
@@ -217,7 +223,7 @@ def main():
   for fname in files_to_process:
     gfn = GFN_from_filename(fname)
     if gfn in fontinfo.keys():
-      fontinfo[gfn]['img_weight'] = render_single_line(fname)
+      fontinfo[gfn]['img_weight'] = render_single_line(fname, "khmer" in fontinfo[gfn]['subsets'])
       # TODO: fontinfo[gfn]["weight"]
       # TODO: "width" = width
       # TODO: "angle" = angle

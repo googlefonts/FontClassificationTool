@@ -31,7 +31,7 @@ def main():
       del metadata[gfn]
 
   # and add the ones that are not yet listed on the old metadata csv:
-  for gfn in gfonts_GFNs:
+  for gfn in gfonts_GFNs.keys():
     if gfn not in metadata:
       metadata[gfn] = {
         'weight_int': -1,
@@ -39,6 +39,8 @@ def main():
         'angle_int': -1,
         'usage': '?',
       }
+    # and update the subsets field:
+    metadata[gfn]['subsets'] = "+".join(gfonts_GFNs[gfn])
 
   # done:
   save_csv(args.metadata, metadata)

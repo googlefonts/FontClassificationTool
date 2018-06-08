@@ -212,9 +212,10 @@ def get_GFNs_from_gfonts(apikey):
   APIURL = 'https://www.googleapis.com/webfonts/v1/webfonts?key={}'.format
   r = requests.get(APIURL(apikey))
 
-  GFNs = []
+  GFNs = {}
   for entry in r.json()["items"]:
     family = entry["family"]
+    subsets = entry["subsets"]
     for variant in entry["variants"]:
 
       if variant == "italic":
@@ -234,6 +235,6 @@ def get_GFNs_from_gfonts(apikey):
         weight = variant
 
       gfn = "{}:{}:{}".format(family, style, weight)
-      GFNs.append(gfn)
+      GFNs[gfn] = subsets
       print (gfn)
   return GFNs

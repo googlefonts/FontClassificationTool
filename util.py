@@ -117,14 +117,15 @@ def group_by_attributes(filenames):
 def save_csv(filename, metadata):
   with open(filename, 'w') as csvfile:
     writer = csv.writer(csvfile, delimiter=',', quotechar='"', lineterminator='\n')
-    writer.writerow(["GFN","FWE","FIA","FWI","USAGE"]) # first row has the headers
+    writer.writerow(["GFN","FWE","FIA","FWI","USAGE", "LANGUAGES"]) # first row has the headers
     for gfn in sorted(metadata.keys()):
       data = metadata[gfn]
       fwe = data['weight_int']
       fia = data['angle_int']
       fwi = data['width_int']
       usage = data['usage']
-      writer.writerow([gfn, fwe, fia, fwi, usage])
+      subsets = data['subsets']
+      writer.writerow([gfn, fwe, fia, fwi, usage, subsets])
 
 
 def read_csv(filename):
@@ -134,11 +135,17 @@ def read_csv(filename):
     next(existing_data) # skip first row as its not data
     for row in existing_data:
       gfn = row[0]
+      if len(row) < 6:
+        subsets = None
+      else:
+        subsets = row[5]
+
       metadata[gfn] = {
         "weight_int": int(row[1]),
         "angle_int": int(row[2]),
         "width_int": int(row[3]),
-        "usage": row[4]
+        "usage": row[4],
+        "subsets": subsets
       }
   return metadata
 
