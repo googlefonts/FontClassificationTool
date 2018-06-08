@@ -148,6 +148,7 @@ window.onload = function() {
                           break;
                       case 39: //right arrow for "more italic"
                           // increase italic angle
+                          e.preventDefault();
                           if (angle < 10){
                             angle++;
                             var previousValue = grid.setValueAt(cur_row, angle_col, angle, true);
@@ -156,6 +157,7 @@ window.onload = function() {
                           break;
                       case 37: //left arrow for "less italic" (towards regular)
                           // decrease italic angle
+                          e.preventDefault();
                           if (angle > 1){
                             angle--;
                             //grid.setValueAt(cur_row, angle_col, angle, true);
