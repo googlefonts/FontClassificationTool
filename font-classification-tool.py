@@ -171,11 +171,20 @@ def render_single_line(fontfile, khmer=False):
 
   # Render the test text using the font onto an image.
   font = ImageFont.truetype(fontfile, FONT_SIZE)
-  text_width, text_height = font.getsize(sample_text)
-  img = Image.new('RGBA', (text_width, text_height))
-  draw = ImageDraw.Draw(img)
-  draw.text((0, 0), sample_text, font=font, fill=(0, 0, 0))
-  return get_base64_image(img)
+
+  try:
+    text_width, text_height = font.getsize(sample_text)
+    img = Image.new('RGBA', (text_width, text_height))
+    draw = ImageDraw.Draw(img)
+    draw.text((0, 0), sample_text, font=font, fill=(0, 0, 0))
+    return get_base64_image(img)
+  except:
+    if khmer:
+      print("Failed to render khmer using '{}'".format(fontfile))
+    else:
+      print("Failed rendering for unknown reason ({})".format(fontfile))
+    return None
+
 
 
 def get_base64_image(img):
@@ -216,6 +225,7 @@ def main():
             "angle_int": int(row[2]),
             "width_int": int(row[3]),
             "usage": row[4],
+            "subsets": row[5],
             "gfn": gfn,
             "img_weight": None
           }

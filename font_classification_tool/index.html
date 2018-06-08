@@ -129,13 +129,10 @@ window.onload = function() {
                   var angle = parseInt(grid.getValueAt(cur_row, angle_col));
                   var weight = parseInt(grid.getValueAt(cur_row, weight_col));
 
-                  e.preventDefault(); // prevent the default action (move caret)
-                  if (e.shiftKey) {
-                  }
-
                   switch (e.keyCode) {
                       case 38:
                           // up
+                          e.preventDefault();
                           input.css("background-color", NOT_SELECTED_COLOR);
                           cur_row--;
                           input = $(grid.getRow(cur_row));
@@ -143,6 +140,7 @@ window.onload = function() {
                           break;
                       case 40:
                           // down
+                          e.preventDefault();
                           input.css("background-color", NOT_SELECTED_COLOR);
                           cur_row++;
                           input = $(grid.getRow(cur_row));

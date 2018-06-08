@@ -195,11 +195,11 @@ def GFN_from_filename(fontfile):
         if VERBOSE:
           print ("Detected GFN from name table entries: '{}' (file='{}')".format(gfn, fontfile))
     except:
-      print("This seems to be a really bad font file...")
+      # print("This seems to be a really bad font file... ({})".format(fontfile))
       pass
 
-  if gfn == 'unknown':
-    print ("Failed to detect GFN value for '{}'. Defaults to 'unknown'.".format(fontfile))
+  #if gfn == 'unknown':
+  #  print ("Failed to detect GFN value for '{}'. Defaults to 'unknown'.".format(fontfile))
 
   return gfn
 
