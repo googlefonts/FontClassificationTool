@@ -55,7 +55,7 @@ def group_by_attributes(fonts):
 def save_csv(filename, metadata):
   with open(filename, 'w') as csvfile:
     writer = csv.writer(csvfile, delimiter=',', quotechar='"', lineterminator='\n')
-    writer.writerow(["GFN","FWE","FIA","FWI","USAGE", "LANGUAGES"]) # first row has the headers
+    writer.writerow(["GFN","FWE","FIA","FWI","USAGE", "SUBSETS"]) # first row has the headers
     for gfn in sorted(metadata.keys()):
       data = metadata[gfn]
       fwe = data['weight_int']
