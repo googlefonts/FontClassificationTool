@@ -201,6 +201,14 @@ def GFN_from_filename(fontfile):
   #if gfn == 'unknown':
   #  print ("Failed to detect GFN value for '{}'. Defaults to 'unknown'.".format(fontfile))
 
+  exceptions = [
+    ("Bio Rhyme", "BioRhyme"),
+  ]
+
+  for bad, good in exceptions:
+    if bad in gfn:
+      gfn = good.join(gfn.split(bad))
+
   return gfn
 
 def GFNs_from_filenames(filenames):
