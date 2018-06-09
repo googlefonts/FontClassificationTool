@@ -46,7 +46,8 @@ def main():
   # and update the subsets field:
   for gfn in gfonts_GFNs.keys():
     if gfn in metadata:
-      metadata[gfn]['subsets'] = "+".join(gfonts_GFNs[gfn])
+      subsets = gfonts_GFNs[gfn]
+      metadata[gfn]['subsets'] = "+".join(sorted(subsets))
 
   # done:
   save_csv(args.metadata, metadata)
