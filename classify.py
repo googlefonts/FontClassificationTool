@@ -46,7 +46,8 @@ def main():
     print("Will process {} font files.".format(len(files_to_process)))
 
 
-  weights, widths = group_by_attributes(files_to_process)
+  fonts = [(fname, old_metadata[GFN_from_filename(fname)]['subsets']) for fname in files_to_process]
+  weights, widths = group_by_attributes(fonts)
   GFNs = GFNs_from_filenames(files_to_process)
 
   metadata = {}

@@ -3,68 +3,6 @@ import csv
 from math import floor
 import sys
 
-try: 
-  from PIL import (Image, 
-                   ImageDraw, 
-                   ImageFont) 
-except: 
-  sys.exit("Needs pillow.\n\npip3 install pillow") 
- 
-
-# The text used to test weight and width. Note that this could be
-# problematic if a given font doesn't have latin support.
-TEXT = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyZz"
-
-# This text-block results in a better calculation of "darkness":
-TEXT_MULTILINE = ("AaBbCcDdEeAaBbCcDdEe\n"
-                  "FfGgHhIiJjFfGgHhIiJj\n"
-                  "KkLlMmNnOoKkLlMmNnOo\n"
-                  "PpQqRrSsTtPpQqRrSsTt\n"
-                  "UuVvXxYyZzUuVvXxYyZz")
-FONT_SIZE=30
-
-
-def compute_darkness_and_width(fontfile):
-  """Returns the darkness and width of a given a TTF.
-
-     Darkness value is a percentage
-     Width is in pixels
-
-     Both values should be normalized.
-  """
-  print ("Computing... {}".format(fontfile))
-
-  # Render the test text using the font onto an image.
-  font = ImageFont.truetype(fontfile, FONT_SIZE)
-  text_width, text_height = font.getsize(TEXT_MULTILINE)
-
-  # This is a trick to get a full block of text avoiding the
-  # beggining and end and sides of the actual rendered string
-  # bounding-box, because PIL seems to be bugged and sometimes
-  # adds some spurious white-space which would introduce
-  # errors in our calculation of the font darkness value:
-  img = Image.new('RGBA', (int(text_width/10), int(5*text_height)))
-  draw = ImageDraw.Draw(img)
-  draw.text((-text_width/20, int(-2.5*text_height)),
-            TEXT_MULTILINE + '\n' + TEXT_MULTILINE,
-            font=font, fill=(0, 0, 0))
-
-  # Calculate the average darkness.
-  histogram = img.histogram()
-  avg = 0.0
-  for i in range(256):
-    alpha = histogram[i + 3*256]
-    avg += (i / 255.0) * alpha
-
-
-  darkness = avg / (text_width * text_height)
-
-  x_height = font.getsize("x")[1]
-  width = text_width / float(x_height)
-
-  return darkness, width#, get_base64_image(img)
-
-
 
 def find_extremes(d):
   """ Input: a dict key:value
@@ -74,7 +12,7 @@ def find_extremes(d):
   return min(values), max(values)
 
 
-def group_by_attributes(filenames):
+def group_by_attributes(fonts):
   """ Classify a set of fonts by their ammount of black ink (percentage of dark
       pixels in a reference paragraph of text) and attribute a normalized score
       from 1 to 10 based on their computed darkness, effectively grouping the
@@ -86,18 +24,18 @@ def group_by_attributes(filenames):
   """
   darkness = {}
   width = {}
-  for name in filenames:
-    darkness[name], width[name] = compute_darkness_and_width(name)
+  for name, subsets in fonts:
+    darkness[name], width[name] = compute_darkness_and_width(name, subsets)
 
   # normalize weight values:
   min_dark, max_dark = find_extremes(darkness)
   dark_range = max_dark - min_dark
 
   if dark_range == 0: # unlikely
-    weights = {name: 5 for name in filenames}
+    weights = {name: 5 for name, _ in fonts}
   else:
     weights = {}
-    for name in filenames:
+    for name, _ in fonts:
       weights[name] = int(1 + floor(10 * ((darkness[name] - min_dark)/ dark_range)))
 
   # normalize width values:
@@ -105,10 +43,10 @@ def group_by_attributes(filenames):
   width_range = max_width - min_width
 
   if width_range == 0: # unlikely
-    widths = {name: 5 for name in filenames}
+    widths = {name: 5 for name, _ in fonts}
   else:
     widths = {}
-    for name in filenames:
+    for name, _ in fonts:
       widths[name] = int(1 + floor(10 * ((width[name] - min_width)/ width_range)))
 
   return weights, widths
@@ -276,20 +214,66 @@ def create_cairo_font_face_for_file (filename, faceindex=0, loadoptions=0):
     face = cairo_ctx.get_font_face()
     return face
 
-if __name__ == '__main__':
-    face = create_cairo_font_face_for_file("/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf", 0)
-    surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, 128, 128)
-    ctx = cairo.Context(surface)
 
-    ctx.set_font_face(face)
-    ctx.set_font_size(30)
-    ctx.move_to(0, 44)
-    ctx.show_text("Hello,")
-    ctx.move_to(30, 74)
-    ctx.show_text("world!")
+FONT_SIZE=30
+# The text used to test weight and width. Note that this could be
+# problematic if a given font doesn't have latin support.
+LATIN_TEXT = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyZz"
+KHMER_TEXT = "\xE1\x9E\x9A\xE1\x9E\x9B\xE1\x9E\x80\xE1\x9E\x94\xE1\x9E\x80\xE1\x9F\x8B\xE1\x9E\x94\xE1\x9F\x84\xE1\x9E\x80\xE1\x9E\x93\xE1\x9E\xB6\xE1\x9E\x9B\xE1\x9F\x92\xE1\x9E\x84\xE1\x9E\xB6\xE1\x9E\x85\xE1\x9E\x8A\xE1\x9F\x8F\xE1\x9E\x80\xE1\x9E\x8E\xE1\x9F\x92\xE1\x9E\x8F\xE1\x9F\x84\xE1\x9E\x85\xE1\x9E\x80\xE1\x9E\x8E\xE1\x9F\x92\xE1\x9E\x8F\xE1\x9F\x82\xE1\x9E\x84"
 
-    del ctx
 
-    surface.write_to_png("hello.png")
-#end if
+def compute_darkness_and_width(fontfile, subsets):
+  """Returns the darkness and width of a given a TTF.
 
+     Darkness value is a percentage
+     Width is in pixels
+
+     Both values should be normalized.
+  """
+  print ("Computing... {}".format(fontfile))
+
+  #TODO: There should be a dict of sample strings per subset
+  # instead of just the khmer special case below:
+  if 'khmer' in subsets:
+    sample_text = KHMER_TEXT
+    sample_xheight = '\xE1\x9E\x85'
+  else:
+    sample_text = LATIN_TEXT
+    sample_xheight = 'x'
+
+  face = create_cairo_font_face_for_file(fontfile, 0)
+
+  #dummy surface
+  surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, 0, 0)
+  ctx = cairo.Context(surface)
+  ctx.set_font_face(face)
+  ctx.set_font_size(FONT_SIZE)
+  xbearing, ybearing, text_width, text_height, _, _ = ctx.text_extents(sample_text)
+  _, _, _, x_height, _, _ = ctx.text_extents(sample_xheight)
+
+
+  #actual surface
+  surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, int(text_width), int(text_height))
+  ctx = cairo.Context(surface)
+
+  ctx.set_font_face(face)
+  ctx.set_font_size(FONT_SIZE)
+  ctx.move_to(-xbearing, -ybearing)
+  ctx.show_text(sample_text)
+
+  pixel_data = surface.get_data()
+  data_width = surface.get_width()
+  data_stride = surface.get_stride()
+  data_height = surface.get_height()
+
+  avg = 0.0
+  for x in xrange(data_width):
+    for y in xrange(data_height):
+      alpha = ord(pixel_data[y*data_stride + 4*x + 3])
+      avg += alpha/255.0
+
+  darkness = avg / (data_width * data_height)
+
+  width = text_width / float(x_height)
+
+  return darkness, width
