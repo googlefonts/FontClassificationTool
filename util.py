@@ -36,7 +36,7 @@ def group_by_attributes(fonts):
   else:
     weights = {}
     for name, _ in fonts:
-      weights[name] = int(1 + floor(10 * ((darkness[name] - min_dark)/ dark_range)))
+      weights[name] = min(10, int(1 + floor(10 * ((darkness[name] - min_dark)/ dark_range))))
 
   # normalize width values:
   min_width, max_width = find_extremes(width)
@@ -47,7 +47,7 @@ def group_by_attributes(fonts):
   else:
     widths = {}
     for name, _ in fonts:
-      widths[name] = int(1 + floor(10 * ((width[name] - min_width)/ width_range)))
+      widths[name] = min(10, int(1 + floor(10 * ((width[name] - min_width)/ width_range))))
 
   return weights, widths
 
