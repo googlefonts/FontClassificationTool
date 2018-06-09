@@ -482,8 +482,8 @@ Contrail One:normal:400,4,3,2,header,latin
 Convergence:normal:400,3,1,3,body,latin
 Cookie:normal:400,3,1,3,header,latin
 Copse:normal:400,3,1,4,header,latin
-Corben:normal:400,3,-1,4,?,latin+latin-ext
-Corben:normal:700,5,-1,4,?,latin+latin-ext
+Corben:normal:400,3,1,4,?,latin+latin-ext
+Corben:normal:700,5,1,4,?,latin+latin-ext
 Cormorant Garamond:italic:300,2,4,4,?,cyrillic+cyrillic-ext+latin+latin-ext+vietnamese
 Cormorant Garamond:italic:400,2,5,4,?,cyrillic+cyrillic-ext+latin+latin-ext+vietnamese
 Cormorant Garamond:italic:500,2,5,4,?,cyrillic+cyrillic-ext+latin+latin-ext+vietnamese
@@ -1609,8 +1609,8 @@ PT Serif:italic:700,4,4,4,header,cyrillic+cyrillic-ext+latin+latin-ext
 PT Serif:normal:400,3,1,4,body,cyrillic+cyrillic-ext+latin+latin-ext
 PT Serif:normal:700,4,1,4,header,cyrillic+cyrillic-ext+latin+latin-ext
 Pacifico:normal:400,4,4,4,header,cyrillic+latin+latin-ext+vietnamese
-Padauk:normal:400,3,-1,4,?,latin+myanmar
-Padauk:normal:700,4,-1,4,?,latin+myanmar
+Padauk:normal:400,3,1,4,?,latin+myanmar
+Padauk:normal:700,4,1,4,?,latin+myanmar
 Palanquin Dark:normal:400,4,1,4,header,devanagari+latin+latin-ext
 Palanquin Dark:normal:500,4,1,4,header,devanagari+latin+latin-ext
 Palanquin Dark:normal:600,5,1,3,header,devanagari+latin+latin-ext
@@ -1870,7 +1870,7 @@ Rosarivo:italic:400,2,4,3,header,latin+latin-ext
 Rosarivo:normal:400,2,1,3,body,latin+latin-ext
 Rouge Script:normal:400,2,4,4,header,latin
 Rozha One:normal:400,3,1,4,body,devanagari+latin+latin-ext
-Rubik Mono One:normal:400,7,-1,4,?,cyrillic+latin+latin-ext
+Rubik Mono One:normal:400,7,1,4,?,cyrillic+latin+latin-ext
 Ruda:normal:400,3,1,3,body,latin+latin-ext
 Ruda:normal:700,4,1,3,header,latin+latin-ext
 Ruda:normal:900,5,1,3,header,latin+latin-ext
