@@ -92,16 +92,26 @@ def read_csv(filename):
 # will be skipped.
 # TODO: Investigate why these don't work.
 BLACKLIST = [
-#IOError: execution context too long (issue #703)
-  "Padauk",
+##IOError: execution context too long (issue #703)
+#  "Padauk",
   "KumarOne",
 #ZeroDivisionError: float division by zero
-  "AdobeBlank",
-  "Phetsarath",
+#  "AdobeBlank",
+#  "Phetsarath",
 # IOError: invalid reference See also: https://github.com/google/fonts/issues/132#issuecomment-244796023
-  "Corben",
+#  "Corben",
 # IOError: stack overflow on text_width, text_height = font.getsize(TEXT) 
-  "Rubik",
+#  "Rubik",
+  "Rubik-BlackItalic",
+  "Rubik-Black",
+  "Rubik-BoldItalic",
+  "Rubik-Bold",
+  "Rubik-Italic",
+  "Rubik-LightItalic",
+  "Rubik-Light",
+  "Rubik-MediumItalic",
+  "Rubik-Medium",
+  "Rubik-Regular",
 ]
 
 def is_blacklisted(filename):
