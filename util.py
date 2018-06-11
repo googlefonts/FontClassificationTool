@@ -52,18 +52,31 @@ def group_by_attributes(fonts):
   return weights, widths
 
 
-def save_csv(filename, metadata):
+def save_csv(filename, metadata, cleanup_for_publishing=False):
   with open(filename, 'w') as csvfile:
     writer = csv.writer(csvfile, delimiter=',', quotechar='"', lineterminator='\n')
-    writer.writerow(["GFN","FWE","FIA","FWI","USAGE", "SUBSETS"]) # first row has the headers
+    header = ["GFN","FWE","FIA","FWI","USAGE"]
+    if not cleanup_for_publishing:
+      header.append('SUBSETS')
+    writer.writerow(header) # first row has the headers
+
     for gfn in sorted(metadata.keys()):
       data = metadata[gfn]
       fwe = data['weight_int']
       fia = data['angle_int']
       fwi = data['width_int']
       usage = data['usage']
-      subsets = data['subsets']
-      writer.writerow([gfn, fwe, fia, fwi, usage, subsets])
+      if cleanup_for_publishing:
+        if usage not in ['body', 'header']: usage = ''
+        if fwe-1 not in range(10): fwe = ''
+        if fia-1 not in range(10): fia = ''
+        if fwi-1 not in range(10): fwi = ''
+
+      row = [gfn, fwe, fia, fwi, usage]
+      if not cleanup_for_publishing:
+        row.append(data['subsets'])
+
+      writer.writerow(row)
 
 
 def read_csv(filename):
