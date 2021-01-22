@@ -104,7 +104,7 @@ def read_csv(filename):
 # Fonts that cause problems: any filenames containing these letters
 # will be skipped.
 # TODO: Investigate why these don't work.
-BLACKLIST = [
+BLOCKLIST = [
 ##IOError: execution context too long (issue #703)
 #  "Padauk",
   "KumarOne",
@@ -127,11 +127,11 @@ BLACKLIST = [
   "Rubik-Regular",
 ]
 
-def is_blacklisted(filename):
-  """Returns whether a font is on the blacklist."""
+def is_blocklisted(filename):
+  """Returns whether a font is on the blocklist."""
 
-  # first check for explicit blacklisting:
-  for name in BLACKLIST:
+  # first check for explicit blocklisting:
+  for name in BLOCKLIST:
     if name in filename:
       return True
 
